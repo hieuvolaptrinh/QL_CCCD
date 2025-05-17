@@ -57,24 +57,27 @@ Partial Class QuanLy
         Me.que = New Guna.UI2.WinForms.Guna2TextBox()
         Me.ten = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DataGridViewCCCD = New System.Windows.Forms.DataGridView()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Guna2CustomGradientPanel1.SuspendLayout()
         Me.pnlVeDat.SuspendLayout()
         Me.pnlVeHuy.SuspendLayout()
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridViewCCCD, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2CustomGradientPanel1
         '
+        Me.Guna2CustomGradientPanel1.Controls.Add(Me.PictureBox2)
         Me.Guna2CustomGradientPanel1.Controls.Add(Me.pnlVeDat)
         Me.Guna2CustomGradientPanel1.Controls.Add(Me.pnlVeHuy)
         Me.Guna2CustomGradientPanel1.Controls.Add(Me.Label1)
         Me.Guna2CustomGradientPanel1.Controls.Add(Me.Xoa)
-        Me.Guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(248, Byte), Integer))
-        Me.Guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Silver
-        Me.Guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.WhiteSmoke
-        Me.Guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.Snow
+        Me.Guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.Guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(1, -3)
         Me.Guna2CustomGradientPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
@@ -86,13 +89,13 @@ Partial Class QuanLy
         Me.pnlVeDat.BackColor = System.Drawing.Color.Transparent
         Me.pnlVeDat.Controls.Add(Me.lblVeDatValue)
         Me.pnlVeDat.Controls.Add(Me.Label5)
-        Me.pnlVeDat.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pnlVeDat.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.pnlVeDat.Location = New System.Drawing.Point(901, 15)
         Me.pnlVeDat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlVeDat.Name = "pnlVeDat"
         Me.pnlVeDat.Radius = 10
         Me.pnlVeDat.ShadowColor = System.Drawing.Color.Black
-        Me.pnlVeDat.ShadowDepth = 10
+        Me.pnlVeDat.ShadowDepth = 5
         Me.pnlVeDat.ShadowShift = 0
         Me.pnlVeDat.Size = New System.Drawing.Size(244, 117)
         Me.pnlVeDat.TabIndex = 15
@@ -100,22 +103,22 @@ Partial Class QuanLy
         'lblVeDatValue
         '
         Me.lblVeDatValue.AutoSize = True
-        Me.lblVeDatValue.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.lblVeDatValue.Font = New System.Drawing.Font("Segoe UI", 28.0!, System.Drawing.FontStyle.Bold)
         Me.lblVeDatValue.ForeColor = System.Drawing.Color.White
         Me.lblVeDatValue.Location = New System.Drawing.Point(32, 52)
         Me.lblVeDatValue.Name = "lblVeDatValue"
-        Me.lblVeDatValue.Size = New System.Drawing.Size(46, 54)
+        Me.lblVeDatValue.Size = New System.Drawing.Size(54, 62)
         Me.lblVeDatValue.TabIndex = 9
         Me.lblVeDatValue.Text = "0"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(15, 15)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(208, 28)
+        Me.Label5.Size = New System.Drawing.Size(225, 28)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Số Người Đã Tích Hợp"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -125,13 +128,13 @@ Partial Class QuanLy
         Me.pnlVeHuy.BackColor = System.Drawing.Color.Transparent
         Me.pnlVeHuy.Controls.Add(Me.lblVeHuyValue)
         Me.pnlVeHuy.Controls.Add(Me.Label12)
-        Me.pnlVeHuy.FillColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pnlVeHuy.FillColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.pnlVeHuy.Location = New System.Drawing.Point(574, 11)
         Me.pnlVeHuy.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.pnlVeHuy.Name = "pnlVeHuy"
         Me.pnlVeHuy.Radius = 10
         Me.pnlVeHuy.ShadowColor = System.Drawing.Color.Black
-        Me.pnlVeHuy.ShadowDepth = 10
+        Me.pnlVeHuy.ShadowDepth = 5
         Me.pnlVeHuy.ShadowShift = 0
         Me.pnlVeHuy.Size = New System.Drawing.Size(251, 117)
         Me.pnlVeHuy.TabIndex = 14
@@ -139,22 +142,22 @@ Partial Class QuanLy
         'lblVeHuyValue
         '
         Me.lblVeHuyValue.AutoSize = True
-        Me.lblVeHuyValue.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.lblVeHuyValue.Font = New System.Drawing.Font("Segoe UI", 28.0!, System.Drawing.FontStyle.Bold)
         Me.lblVeHuyValue.ForeColor = System.Drawing.Color.White
         Me.lblVeHuyValue.Location = New System.Drawing.Point(16, 52)
         Me.lblVeHuyValue.Name = "lblVeHuyValue"
-        Me.lblVeHuyValue.Size = New System.Drawing.Size(69, 54)
+        Me.lblVeHuyValue.Size = New System.Drawing.Size(81, 62)
         Me.lblVeHuyValue.TabIndex = 9
         Me.lblVeHuyValue.Text = "32"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(20, 15)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(172, 28)
+        Me.Label12.Size = New System.Drawing.Size(185, 28)
         Me.Label12.TabIndex = 9
         Me.Label12.Text = "Số Người Vi Phạm"
         '
@@ -162,20 +165,22 @@ Partial Class QuanLy
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Blue
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Label1.Location = New System.Drawing.Point(20, 26)
+        Me.Label1.Location = New System.Drawing.Point(20, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(303, 76)
+        Me.Label1.Size = New System.Drawing.Size(366, 92)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Quản Lý" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Căng Cước Công Dân"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Xoa
         '
-        Me.Xoa.BackColor = System.Drawing.Color.Red
-        Me.Xoa.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Xoa.BackColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.Xoa.FlatAppearance.BorderSize = 0
+        Me.Xoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Xoa.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Xoa.ForeColor = System.Drawing.Color.White
         Me.Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Xoa.Location = New System.Drawing.Point(1231, 35)
@@ -188,19 +193,21 @@ Partial Class QuanLy
         '
         'Guna2ShadowPanel1
         '
-        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.White
         Me.Guna2ShadowPanel1.Controls.Add(Me.GroupBox1)
         Me.Guna2ShadowPanel1.Controls.Add(Me.DataGridViewCCCD)
         Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.White
         Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(1, 134)
         Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
-        Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
+        Me.Guna2ShadowPanel1.Padding = New System.Windows.Forms.Padding(20)
+        Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.Guna2ShadowPanel1.ShadowDepth = 3
         Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(1422, 757)
         Me.Guna2ShadowPanel1.TabIndex = 11
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtDiaChi)
         Me.GroupBox1.Controls.Add(Me.Guna2GradientButton1)
@@ -224,7 +231,8 @@ Partial Class QuanLy
         Me.GroupBox1.Controls.Add(Me.cccd)
         Me.GroupBox1.Controls.Add(Me.que)
         Me.GroupBox1.Controls.Add(Me.ten)
-        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.GroupBox1.Location = New System.Drawing.Point(27, 21)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
@@ -237,17 +245,17 @@ Partial Class QuanLy
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.Label10.Location = New System.Drawing.Point(947, 56)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(84, 31)
+        Me.Label10.Size = New System.Drawing.Size(71, 25)
         Me.Label10.TabIndex = 28
         Me.Label10.Text = "Địa chỉ"
         '
         'txtDiaChi
         '
         Me.txtDiaChi.BackColor = System.Drawing.Color.Transparent
-        Me.txtDiaChi.BorderColor = System.Drawing.Color.IndianRed
+        Me.txtDiaChi.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDiaChi.BorderRadius = 10
         Me.txtDiaChi.BorderThickness = 2
         Me.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -257,7 +265,7 @@ Partial Class QuanLy
         Me.txtDiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtDiaChi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtDiaChi.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtDiaChi.ForeColor = System.Drawing.Color.Black
         Me.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtDiaChi.Location = New System.Drawing.Point(1077, 48)
@@ -277,9 +285,9 @@ Partial Class QuanLy
         Me.Guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(176, Byte), Integer))
-        Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(176, Byte), Integer))
-        Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(125, Byte), Integer))
+        Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(125, Byte), Integer))
+        Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
         Me.Guna2GradientButton1.Location = New System.Drawing.Point(930, 188)
         Me.Guna2GradientButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -296,10 +304,10 @@ Partial Class QuanLy
         Me.timKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.timKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.timKiem.DisabledState.ForeColor = System.Drawing.Color.Black
-        Me.timKiem.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.timKiem.FillColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(184, Byte), Integer))
         Me.timKiem.FocusedColor = System.Drawing.Color.Green
-        Me.timKiem.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.timKiem.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.timKiem.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
+        Me.timKiem.ForeColor = System.Drawing.Color.White
         Me.timKiem.Image = Global.QuanLyCCCD.My.Resources.Resources.find
         Me.timKiem.Location = New System.Drawing.Point(1148, 190)
         Me.timKiem.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -317,10 +325,10 @@ Partial Class QuanLy
         Me.Guna2GradientButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton10.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton10.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Guna2GradientButton10.FillColor2 = System.Drawing.Color.Blue
-        Me.Guna2GradientButton10.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2GradientButton10.ForeColor = System.Drawing.Color.Black
+        Me.Guna2GradientButton10.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2GradientButton10.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2GradientButton10.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Guna2GradientButton10.ForeColor = System.Drawing.Color.White
         Me.Guna2GradientButton10.Location = New System.Drawing.Point(379, 278)
         Me.Guna2GradientButton10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2GradientButton10.Name = "Guna2GradientButton10"
@@ -331,7 +339,7 @@ Partial Class QuanLy
         'ngcap
         '
         Me.ngcap.Checked = True
-        Me.ngcap.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ngcap.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.ngcap.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
         Me.ngcap.Location = New System.Drawing.Point(568, 106)
         Me.ngcap.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -345,7 +353,7 @@ Partial Class QuanLy
         'ngsinh
         '
         Me.ngsinh.Checked = True
-        Me.ngsinh.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ngsinh.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.ngsinh.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
         Me.ngsinh.Location = New System.Drawing.Point(157, 106)
         Me.ngsinh.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -364,10 +372,10 @@ Partial Class QuanLy
         Me.Guna2GradientButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton9.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton9.FillColor = System.Drawing.Color.Salmon
-        Me.Guna2GradientButton9.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Guna2GradientButton9.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2GradientButton9.ForeColor = System.Drawing.Color.Black
+        Me.Guna2GradientButton9.FillColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.Guna2GradientButton9.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.Guna2GradientButton9.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Guna2GradientButton9.ForeColor = System.Drawing.Color.White
         Me.Guna2GradientButton9.Location = New System.Drawing.Point(202, 278)
         Me.Guna2GradientButton9.Name = "Guna2GradientButton9"
         Me.Guna2GradientButton9.Size = New System.Drawing.Size(164, 56)
@@ -382,9 +390,9 @@ Partial Class QuanLy
         Me.Guna2GradientButton8.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton8.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton8.FillColor = System.Drawing.Color.Yellow
-        Me.Guna2GradientButton8.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Guna2GradientButton8.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2GradientButton8.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.Guna2GradientButton8.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.Guna2GradientButton8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2GradientButton8.ForeColor = System.Drawing.Color.Black
         Me.Guna2GradientButton8.Location = New System.Drawing.Point(6, 278)
         Me.Guna2GradientButton8.Name = "Guna2GradientButton8"
@@ -394,16 +402,16 @@ Partial Class QuanLy
         '
         'Guna2GradientButton6
         '
-        Me.Guna2GradientButton6.BorderRadius = 10
+        Me.Guna2GradientButton6.BorderRadius = 15
         Me.Guna2GradientButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2GradientButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton6.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2GradientButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton6.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Guna2GradientButton6.FillColor2 = System.Drawing.Color.Green
-        Me.Guna2GradientButton6.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2GradientButton6.ForeColor = System.Drawing.Color.Black
+        Me.Guna2GradientButton6.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.Guna2GradientButton6.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.Guna2GradientButton6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.Guna2GradientButton6.ForeColor = System.Drawing.Color.White
         Me.Guna2GradientButton6.Location = New System.Drawing.Point(580, 278)
         Me.Guna2GradientButton6.Name = "Guna2GradientButton6"
         Me.Guna2GradientButton6.Size = New System.Drawing.Size(168, 56)
@@ -413,70 +421,70 @@ Partial Class QuanLy
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.Label8.Location = New System.Drawing.Point(452, 185)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(94, 31)
+        Me.Label8.Size = New System.Drawing.Size(79, 25)
         Me.Label8.TabIndex = 6
         Me.Label8.Text = "Nơi cấp"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.Label6.Location = New System.Drawing.Point(22, 188)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(101, 31)
+        Me.Label6.Size = New System.Drawing.Size(86, 25)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Số CCCD"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.Label9.Location = New System.Drawing.Point(451, 118)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(111, 31)
+        Me.Label9.Size = New System.Drawing.Size(93, 25)
         Me.Label9.TabIndex = 6
         Me.Label9.Text = "Ngày cấp"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.Label4.Location = New System.Drawing.Point(22, 120)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(116, 31)
+        Me.Label4.Size = New System.Drawing.Size(98, 25)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Ngày sinh"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.Label3.Location = New System.Drawing.Point(947, 121)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(102, 31)
+        Me.Label3.Size = New System.Drawing.Size(86, 25)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Giới tính"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.Label2.Location = New System.Drawing.Point(448, 51)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(114, 31)
+        Me.Label2.Size = New System.Drawing.Size(95, 25)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Quê quán"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 11.0!)
         Me.Label7.Location = New System.Drawing.Point(22, 57)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 31)
+        Me.Label7.Size = New System.Drawing.Size(95, 25)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Họ và tên"
         '
@@ -488,11 +496,11 @@ Partial Class QuanLy
         Me.rdioNu.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.rdioNu.CheckedState.InnerColor = System.Drawing.Color.White
         Me.rdioNu.CheckedState.InnerOffset = -4
-        Me.rdioNu.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.rdioNu.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.rdioNu.Location = New System.Drawing.Point(1087, 121)
         Me.rdioNu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rdioNu.Name = "rdioNu"
-        Me.rdioNu.Size = New System.Drawing.Size(60, 32)
+        Me.rdioNu.Size = New System.Drawing.Size(58, 29)
         Me.rdioNu.TabIndex = 5
         Me.rdioNu.Text = "Nữ"
         Me.rdioNu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
@@ -508,11 +516,11 @@ Partial Class QuanLy
         Me.rdioNam.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.rdioNam.CheckedState.InnerColor = System.Drawing.Color.White
         Me.rdioNam.CheckedState.InnerOffset = -4
-        Me.rdioNam.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.rdioNam.Font = New System.Drawing.Font("Segoe UI", 11.0!)
         Me.rdioNam.Location = New System.Drawing.Point(1188, 121)
         Me.rdioNam.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.rdioNam.Name = "rdioNam"
-        Me.rdioNam.Size = New System.Drawing.Size(75, 32)
+        Me.rdioNam.Size = New System.Drawing.Size(73, 29)
         Me.rdioNam.TabIndex = 5
         Me.rdioNam.Text = "Nam"
         Me.rdioNam.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
@@ -523,7 +531,7 @@ Partial Class QuanLy
         'txtNoiCap
         '
         Me.txtNoiCap.BackColor = System.Drawing.Color.Transparent
-        Me.txtNoiCap.BorderColor = System.Drawing.Color.IndianRed
+        Me.txtNoiCap.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNoiCap.BorderRadius = 10
         Me.txtNoiCap.BorderThickness = 2
         Me.txtNoiCap.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -533,7 +541,7 @@ Partial Class QuanLy
         Me.txtNoiCap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNoiCap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.txtNoiCap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtNoiCap.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtNoiCap.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.txtNoiCap.ForeColor = System.Drawing.Color.Black
         Me.txtNoiCap.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.txtNoiCap.Location = New System.Drawing.Point(572, 176)
@@ -548,7 +556,7 @@ Partial Class QuanLy
         'cccd
         '
         Me.cccd.BackColor = System.Drawing.Color.Transparent
-        Me.cccd.BorderColor = System.Drawing.Color.IndianRed
+        Me.cccd.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cccd.BorderRadius = 10
         Me.cccd.BorderThickness = 2
         Me.cccd.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -558,7 +566,7 @@ Partial Class QuanLy
         Me.cccd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.cccd.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.cccd.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.cccd.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.cccd.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.cccd.ForeColor = System.Drawing.Color.Black
         Me.cccd.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.cccd.Location = New System.Drawing.Point(157, 176)
@@ -573,7 +581,7 @@ Partial Class QuanLy
         'que
         '
         Me.que.BackColor = System.Drawing.Color.Transparent
-        Me.que.BorderColor = System.Drawing.Color.IndianRed
+        Me.que.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.que.BorderRadius = 10
         Me.que.BorderThickness = 2
         Me.que.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -583,7 +591,7 @@ Partial Class QuanLy
         Me.que.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.que.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.que.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.que.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.que.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.que.ForeColor = System.Drawing.Color.Black
         Me.que.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.que.Location = New System.Drawing.Point(568, 48)
@@ -598,7 +606,7 @@ Partial Class QuanLy
         'ten
         '
         Me.ten.BackColor = System.Drawing.Color.Transparent
-        Me.ten.BorderColor = System.Drawing.Color.IndianRed
+        Me.ten.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ten.BorderRadius = 10
         Me.ten.BorderThickness = 2
         Me.ten.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -608,7 +616,7 @@ Partial Class QuanLy
         Me.ten.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.ten.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.ten.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ten.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ten.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.ten.ForeColor = System.Drawing.Color.Black
         Me.ten.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ten.Location = New System.Drawing.Point(157, 46)
@@ -630,6 +638,18 @@ Partial Class QuanLy
         Me.DataGridViewCCCD.Size = New System.Drawing.Size(1373, 381)
         Me.DataGridViewCCCD.TabIndex = 0
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.QuanLyCCCD.My.Resources.Resources.policeman
+        Me.PictureBox2.Location = New System.Drawing.Point(11, 11)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(109, 57)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 16
+        Me.PictureBox2.TabStop = False
+        '
         'QuanLy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -649,6 +669,7 @@ Partial Class QuanLy
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridViewCCCD, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -688,4 +709,5 @@ Partial Class QuanLy
     Private WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Label10 As Label
     Friend WithEvents txtDiaChi As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

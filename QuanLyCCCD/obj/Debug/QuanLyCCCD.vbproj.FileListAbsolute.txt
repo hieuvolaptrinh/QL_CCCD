@@ -212,3 +212,4 @@ D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\N�
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.vbproj.Up2Date
+D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.ViPham.resources
