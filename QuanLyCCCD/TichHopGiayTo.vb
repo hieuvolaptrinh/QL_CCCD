@@ -1,11 +1,6 @@
 ﻿Public Class TichHopGiayTo
     Private dao As New GiayToDAO()
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
-        Me.Close()
-        DieuKhien.Show()
-    End Sub
-
     Private Sub Guna2GradientButton7_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton7.Click
         ' Nút đăng ký GPLX
         Dim soCCCD As String = cccd.Text.Trim()
@@ -54,52 +49,5 @@
         dao.ThemBHYT(giayTo)
     End Sub
 
-    Private Sub Guna2GradientButton6_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton6.Click
-        Me.Close()
-        QuanLy.Show()
-    End Sub
 
-    Private Sub Guna2GradientButton2_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton2.Click
-        Me.Close()
-        HoSoLienQuan.Show()
-    End Sub
-
-    Private Sub Guna2GradientButton4_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton4.Click
-        Me.Close()
-        ThongKe.Show()
-    End Sub
-
-    Private Sub Xoa_Click(sender As Object, e As EventArgs) Handles Xoa.Click
-        Me.Close()
-        Form1.Show()
-    End Sub
-
-    Private Sub TrangChủToolStripMenuItem_Click(sender As Object, e As EventArgs) 
-        Me.Close()
-        Home.Show()
-    End Sub
-
-    Private Sub BảngĐiềuKhiểnToolStripMenuItem_Click(sender As Object, e As EventArgs) 
-        Me.Close()
-        Home.Show()
-    End Sub
-
-    Private Sub QuảnLýCôngDânToolStripMenuItem_Click(sender As Object, e As EventArgs) 
-        Me.Close()
-        QuanLy.Show()
-    End Sub
-
-    Private Sub HồSơLiênQuanToolStripMenuItem_Click(sender As Object, e As EventArgs) 
-        Me.Close()
-        HoSoLienQuan.Show()
-    End Sub
-
-    Private Sub TíchHợpGiấyTờToolStripMenuItem_Click(sender As Object, e As EventArgs) 
-        ' Đã ở form Tích Hợp Giấy Tờ, không cần làm gì
-    End Sub
-
-    Private Sub BáoCáoThốngKêToolStripMenuItem_Click(sender As Object, e As EventArgs) 
-        Me.Close()
-        ThongKe.Show()
-    End Sub
 End Class

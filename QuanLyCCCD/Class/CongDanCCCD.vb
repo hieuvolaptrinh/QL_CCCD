@@ -1,129 +1,97 @@
 ﻿Public Class CongDanCCCD
-    Private _soCCCD As String
-    Private _hoTen As String
-    Private _ngaySinh As DateTime
-    Private _gioiTinh As String
-    Private _danToc As String
-    Private _tonGiao As String
-    Private _queQuan As String
-    Private _maQH As String
-    Private _ngayCap As DateTime
-    Private _noiCap As String
-    Private _ngayHetHan As DateTime?
+    Private soCCCDField As String
+    Private hoTenField As String
+    Private ngaySinhField As DateTime
+    Private gioiTinhField As String
+    Private queQuanField As String
+    Private noiOField As String
+    Private ngayCapField As DateTime
+    Private noiCapField As String
 
     Public Property SoCCCD As String
         Get
-            Return _soCCCD
+            Return soCCCDField
         End Get
         Set(value As String)
-            _soCCCD = value
+            soCCCDField = value
         End Set
     End Property
 
     Public Property HoTen As String
         Get
-            Return _hoTen
+            Return hoTenField
         End Get
         Set(value As String)
-            _hoTen = value
+            hoTenField = value
         End Set
     End Property
 
     Public Property NgaySinh As DateTime
         Get
-            Return _ngaySinh
+            Return ngaySinhField
         End Get
         Set(value As DateTime)
-            _ngaySinh = value
+            ngaySinhField = value
         End Set
     End Property
 
     Public Property GioiTinh As String
         Get
-            Return _gioiTinh
+            Return gioiTinhField
         End Get
         Set(value As String)
-            _gioiTinh = value
-        End Set
-    End Property
-
-    Public Property DanToc As String
-        Get
-            Return _danToc
-        End Get
-        Set(value As String)
-            _danToc = value
-        End Set
-    End Property
-
-    Public Property TonGiao As String
-        Get
-            Return _tonGiao
-        End Get
-        Set(value As String)
-            _tonGiao = value
+            gioiTinhField = value
         End Set
     End Property
 
     Public Property QueQuan As String
         Get
-            Return _queQuan
+            Return queQuanField
         End Get
         Set(value As String)
-            _queQuan = value
+            queQuanField = value
         End Set
     End Property
 
-    Public Property MaQH As String
+    Public Property NoiO As String
         Get
-            Return _maQH
+            Return noiOField
         End Get
         Set(value As String)
-            _maQH = value
+            noiOField = value
         End Set
     End Property
 
     Public Property NgayCap As DateTime
         Get
-            Return _ngayCap
+            Return ngayCapField
         End Get
         Set(value As DateTime)
-            _ngayCap = value
+            ngayCapField = value
         End Set
     End Property
 
     Public Property NoiCap As String
         Get
-            Return _noiCap
+            Return noiCapField
         End Get
         Set(value As String)
-            _noiCap = value
-        End Set
-    End Property
-
-    Public Property NgayHetHan As DateTime?
-        Get
-            Return _ngayHetHan
-        End Get
-        Set(value As DateTime?)
-            _ngayHetHan = value
+            noiCapField = value
         End Set
     End Property
 
     Public Sub New()
     End Sub
 
-    Public Sub New(soCCCD As String, hoTen As String, ngaySinh As DateTime, gioiTinh As String, danToc As String, tonGiao As String, queQuan As String, maQH As String, ngayCap As DateTime, noiCap As String, ngayHetHan As DateTime?)
+    Public Sub New(soCCCD As String, hoTen As String, ngaySinh As DateTime, gioiTinh As String, 
+                  queQuan As String, noiO As String, ngayCap As DateTime, noiCap As String)
         Me.SoCCCD = soCCCD
         Me.HoTen = hoTen
         Me.NgaySinh = ngaySinh
         Me.GioiTinh = gioiTinh
-        Me.DanToc = danToc
-        Me.TonGiao = tonGiao
         Me.QueQuan = queQuan
-        Me.MaQH = maQH
+        Me.NoiO = noiO
         Me.NgayCap = ngayCap
         Me.NoiCap = noiCap
-        Me.NgayHetHan = ngayHetHan
     End Sub
 End Class

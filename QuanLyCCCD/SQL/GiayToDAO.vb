@@ -69,8 +69,8 @@ Public Class GiayToDAO
 
         Try
             conn.Open()
-            Dim query As String = "SELECT SoCCCD, HoTen, NgaySinh, GioiTinh, DanToc, TonGiao, QueQuan, MaQH, NgayCap, NoiCap, NgayHetHan " &
-                                 "FROM CongDanCCCD WHERE SoCCCD = @SoCCCD"
+            Dim query As String = "SELECT SoCCCD, HoTen, NgaySinh, GioiTinh, QueQuan, NoiO, NgayCap, NoiCap " &
+                             "FROM CongDanCCCD WHERE SoCCCD = @SoCCCD"
             Dim cmd As New SqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@SoCCCD", soCCCD)
             Dim reader As SqlDataReader = cmd.ExecuteReader()
@@ -80,13 +80,10 @@ Public Class GiayToDAO
                 congDan.HoTen = reader("HoTen").ToString()
                 congDan.NgaySinh = Convert.ToDateTime(reader("NgaySinh"))
                 congDan.GioiTinh = reader("GioiTinh").ToString()
-                congDan.DanToc = If(reader("DanToc") Is DBNull.Value, String.Empty, reader("DanToc").ToString())
-                congDan.TonGiao = If(reader("TonGiao") Is DBNull.Value, String.Empty, reader("TonGiao").ToString())
                 congDan.QueQuan = If(reader("QueQuan") Is DBNull.Value, String.Empty, reader("QueQuan").ToString())
-                congDan.MaQH = If(reader("MaQH") Is DBNull.Value, String.Empty, reader("MaQH").ToString())
+                congDan.NoiO = If(reader("NoiO") Is DBNull.Value, String.Empty, reader("NoiO").ToString())
                 congDan.NgayCap = Convert.ToDateTime(reader("NgayCap"))
                 congDan.NoiCap = reader("NoiCap").ToString()
-                congDan.NgayHetHan = If(reader("NgayHetHan") Is DBNull.Value, Nothing, Convert.ToDateTime(reader("NgayHetHan")))
             Else
                 MessageBox.Show("Không tìm thấy công dân với số CCCD này.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 congDan = Nothing

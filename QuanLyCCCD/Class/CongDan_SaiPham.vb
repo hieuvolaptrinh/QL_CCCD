@@ -1,144 +1,124 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class CongDan_SaiPham
-    Private _MaSaiPham As String
-    Private _SoCCCD As String
-    Private _LoiSaiPham As String
-    Private _NgaySai As Date
-    Private _NoiSaiPham As String
-    Private _MucPhat As Decimal
-    Private _TrangThai As String
-    Private _HoTen As String
-    Private _NgaySinh As Date
-    Private _GioiTinh As String
-    Private _DanToc As String
-    Private _TonGiao As String
-    Private _QueQuan As String
-    Private _QuanHuyen As String
+    Private maSaiPhamField As String
+    Private soCCCDField As String
+    Private loiSaiPhamField As String
+    Private ngaySaiField As Date
+    Private noiSaiPhamField As String
+    Private mucPhatField As Decimal
+    Private trangThaiField As String
+    Private hoTenField As String
+    Private ngaySinhField As Date
+    Private gioiTinhField As String
+    Private queQuanField As String
+    Private noiOField As String
 
     Public Property MaSaiPham As String
         Get
-            Return _MaSaiPham
+            Return maSaiPhamField
         End Get
         Set(value As String)
-            _MaSaiPham = value
+            maSaiPhamField = value
         End Set
     End Property
 
     Public Property SoCCCD As String
         Get
-            Return _SoCCCD
+            Return soCCCDField
         End Get
         Set(value As String)
-            _SoCCCD = value
+            soCCCDField = value
         End Set
     End Property
 
     Public Property LoiSaiPham As String
         Get
-            Return _LoiSaiPham
+            Return loiSaiPhamField
         End Get
         Set(value As String)
-            _LoiSaiPham = value
+            loiSaiPhamField = value
         End Set
     End Property
 
     Public Property NgaySai As Date
         Get
-            Return _NgaySai
+            Return ngaySaiField
         End Get
         Set(value As Date)
-            _NgaySai = value
+            ngaySaiField = value
         End Set
     End Property
 
     Public Property NoiSaiPham As String
         Get
-            Return _NoiSaiPham
+            Return noiSaiPhamField
         End Get
         Set(value As String)
-            _NoiSaiPham = value
+            noiSaiPhamField = value
         End Set
     End Property
 
     Public Property MucPhat As Decimal?
         Get
-            Return _MucPhat
+            Return mucPhatField
         End Get
         Set(value As Decimal?)
-            _MucPhat = value
+            mucPhatField = value
         End Set
     End Property
 
     Public Property TrangThai As String
         Get
-            Return _TrangThai
+            Return trangThaiField
         End Get
         Set(value As String)
-            _TrangThai = value
+            trangThaiField = value
         End Set
     End Property
 
     Public Property HoTen As String
         Get
-            Return _HoTen
+            Return hoTenField
         End Get
         Set(value As String)
-            _HoTen = value
+            hoTenField = value
         End Set
     End Property
 
     Public Property NgaySinh As Date
         Get
-            Return _NgaySinh
+            Return ngaySinhField
         End Get
         Set(value As Date)
-            _NgaySinh = value
+            ngaySinhField = value
         End Set
     End Property
 
     Public Property GioiTinh As String
         Get
-            Return _GioiTinh
+            Return gioiTinhField
         End Get
         Set(value As String)
-            _GioiTinh = value
-        End Set
-    End Property
-
-    Public Property DanToc As String
-        Get
-            Return _DanToc
-        End Get
-        Set(value As String)
-            _DanToc = value
-        End Set
-    End Property
-
-    Public Property TonGiao As String
-        Get
-            Return _TonGiao
-        End Get
-        Set(value As String)
-            _TonGiao = value
+            gioiTinhField = value
         End Set
     End Property
 
     Public Property QueQuan As String
         Get
-            Return _QueQuan
+            Return queQuanField
         End Get
         Set(value As String)
-            _QueQuan = value
+            queQuanField = value
         End Set
     End Property
 
-    Public Property QH As String
+    Public Property NoiO As String
         Get
-            Return _QuanHuyen
+            Return noiOField
         End Get
         Set(value As String)
-            _QuanHuyen = value
+            noiOField = value
         End Set
     End Property
 
@@ -148,12 +128,9 @@ Public Class CongDan_SaiPham
         ' Câu lệnh SQL
         Dim sql As String = "
         SELECT sp.MaSaiPham, sp.SoCCCD, sp.LoiSaiPham, sp.NgaySai, sp.NoiSaiPham, sp.MucPhat, sp.TrangThai,
-               cc.HoTen, cc.NgaySinh, cc.GioiTinh, cc.DanToc, cc.TonGiao, cc.QueQuan,
-               qh.TenQH
+               cc.HoTen, cc.NgaySinh, cc.GioiTinh, cc.QueQuan, cc.NoiO
         FROM SaiPham sp
-        JOIN CongDanCCCD cc ON sp.SoCCCD = cc.SoCCCD
-        JOIN QuanHuyen qh ON qh.MaQH = cc.MaQH
-    "
+        JOIN CongDanCCCD cc ON sp.SoCCCD = cc.SoCCCD"
 
         ' Thực thi SQL
         Dim reader As SqlDataReader = ExecuteSQL(sql)
@@ -173,10 +150,8 @@ Public Class CongDan_SaiPham
                 cdsp.HoTen = reader("HoTen").ToString()
                 cdsp.NgaySinh = Convert.ToDateTime(reader("NgaySinh"))
                 cdsp.GioiTinh = reader("GioiTinh").ToString()
-                cdsp.DanToc = reader("DanToc").ToString()
-                cdsp.TonGiao = reader("TonGiao").ToString()
-                cdsp.QueQuan = reader("QueQuan").ToString()
-                cdsp.QH = reader("TenQH").ToString()
+                cdsp.QueQuan = If(IsDBNull(reader("QueQuan")), String.Empty, reader("QueQuan").ToString())
+                cdsp.NoiO = If(IsDBNull(reader("NoiO")), String.Empty, reader("NoiO").ToString())
 
                 result.Add(cdsp)
             End While

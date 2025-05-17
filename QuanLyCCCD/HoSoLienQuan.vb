@@ -210,31 +210,5 @@ Public Class HoSoLienQuan
         End If
     End Sub
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        DieuKhien.Show()
-    End Sub
 
-    Private Sub Guna2GradientButton6_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        QuanLy.Show()
-    End Sub
-
-    Private Sub Guna2GradientButton3_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        TichHopGiayTo.Show()
-    End Sub
-
-    Private Sub Guna2GradientButton4_Click(sender As Object, e As EventArgs)
-        Me.Close()
-        ThongKe.Show()
-    End Sub
-
-    Private Sub Xoa_Click_1(sender As Object, e As EventArgs) Handles Xoa.Click
-        Me.Close()
-        Form1.Show()
-    End Sub
-
-    Private Sub Guna2ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxLoaiGiayTo.SelectedIndexChanged
-    End Sub
 End Class

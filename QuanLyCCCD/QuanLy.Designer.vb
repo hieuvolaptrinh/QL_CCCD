@@ -23,9 +23,19 @@ Partial Class QuanLy
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.pnlVeDat = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.lblVeDatValue = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.pnlVeHuy = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.lblVeHuyValue = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Xoa = New System.Windows.Forms.Button()
         Me.Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtDiaChi = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.timKiem = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GradientButton10 = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.ngcap = New Guna.UI2.WinForms.Guna2DateTimePicker()
@@ -47,22 +57,12 @@ Partial Class QuanLy
         Me.que = New Guna.UI2.WinForms.Guna2TextBox()
         Me.ten = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DataGridViewCCCD = New System.Windows.Forms.DataGridView()
-        Me.Xoa = New System.Windows.Forms.Button()
-        Me.pnlVeHuy = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.lblVeHuyValue = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.pnlVeDat = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.lblVeDatValue = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtDiaChi = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2CustomGradientPanel1.SuspendLayout()
+        Me.pnlVeDat.SuspendLayout()
+        Me.pnlVeHuy.SuspendLayout()
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridViewCCCD, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pnlVeHuy.SuspendLayout()
-        Me.pnlVeDat.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2CustomGradientPanel1
@@ -81,6 +81,83 @@ Partial Class QuanLy
         Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(1422, 141)
         Me.Guna2CustomGradientPanel1.TabIndex = 9
         '
+        'pnlVeDat
+        '
+        Me.pnlVeDat.BackColor = System.Drawing.Color.Transparent
+        Me.pnlVeDat.Controls.Add(Me.lblVeDatValue)
+        Me.pnlVeDat.Controls.Add(Me.Label5)
+        Me.pnlVeDat.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.pnlVeDat.Location = New System.Drawing.Point(901, 15)
+        Me.pnlVeDat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.pnlVeDat.Name = "pnlVeDat"
+        Me.pnlVeDat.Radius = 10
+        Me.pnlVeDat.ShadowColor = System.Drawing.Color.Black
+        Me.pnlVeDat.ShadowDepth = 10
+        Me.pnlVeDat.ShadowShift = 0
+        Me.pnlVeDat.Size = New System.Drawing.Size(244, 117)
+        Me.pnlVeDat.TabIndex = 15
+        '
+        'lblVeDatValue
+        '
+        Me.lblVeDatValue.AutoSize = True
+        Me.lblVeDatValue.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.lblVeDatValue.ForeColor = System.Drawing.Color.White
+        Me.lblVeDatValue.Location = New System.Drawing.Point(32, 52)
+        Me.lblVeDatValue.Name = "lblVeDatValue"
+        Me.lblVeDatValue.Size = New System.Drawing.Size(46, 54)
+        Me.lblVeDatValue.TabIndex = 9
+        Me.lblVeDatValue.Text = "0"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(15, 15)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(208, 28)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Số Người Đã Tích Hợp"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'pnlVeHuy
+        '
+        Me.pnlVeHuy.BackColor = System.Drawing.Color.Transparent
+        Me.pnlVeHuy.Controls.Add(Me.lblVeHuyValue)
+        Me.pnlVeHuy.Controls.Add(Me.Label12)
+        Me.pnlVeHuy.FillColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.pnlVeHuy.Location = New System.Drawing.Point(574, 11)
+        Me.pnlVeHuy.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.pnlVeHuy.Name = "pnlVeHuy"
+        Me.pnlVeHuy.Radius = 10
+        Me.pnlVeHuy.ShadowColor = System.Drawing.Color.Black
+        Me.pnlVeHuy.ShadowDepth = 10
+        Me.pnlVeHuy.ShadowShift = 0
+        Me.pnlVeHuy.Size = New System.Drawing.Size(251, 117)
+        Me.pnlVeHuy.TabIndex = 14
+        '
+        'lblVeHuyValue
+        '
+        Me.lblVeHuyValue.AutoSize = True
+        Me.lblVeHuyValue.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.lblVeHuyValue.ForeColor = System.Drawing.Color.White
+        Me.lblVeHuyValue.Location = New System.Drawing.Point(16, 52)
+        Me.lblVeHuyValue.Name = "lblVeHuyValue"
+        Me.lblVeHuyValue.Size = New System.Drawing.Size(69, 54)
+        Me.lblVeHuyValue.TabIndex = 9
+        Me.lblVeHuyValue.Text = "32"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label12.ForeColor = System.Drawing.Color.White
+        Me.Label12.Location = New System.Drawing.Point(20, 15)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(172, 28)
+        Me.Label12.TabIndex = 9
+        Me.Label12.Text = "Số Người Vi Phạm"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -95,6 +172,20 @@ Partial Class QuanLy
         Me.Label1.Text = "Quản Lý" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Căng Cước Công Dân"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'Xoa
+        '
+        Me.Xoa.BackColor = System.Drawing.Color.Red
+        Me.Xoa.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Xoa.ForeColor = System.Drawing.Color.White
+        Me.Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Xoa.Location = New System.Drawing.Point(1231, 35)
+        Me.Xoa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Xoa.Name = "Xoa"
+        Me.Xoa.Size = New System.Drawing.Size(180, 48)
+        Me.Xoa.TabIndex = 11
+        Me.Xoa.Text = "Đăng Xuất"
+        Me.Xoa.UseVisualStyleBackColor = False
+        '
         'Guna2ShadowPanel1
         '
         Me.Guna2ShadowPanel1.BackColor = System.Drawing.Color.Black
@@ -104,7 +195,7 @@ Partial Class QuanLy
         Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(1, 134)
         Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
         Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black
-        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(1422, 661)
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(1422, 757)
         Me.Guna2ShadowPanel1.TabIndex = 11
         '
         'GroupBox1
@@ -142,6 +233,60 @@ Partial Class QuanLy
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Quản Lý Công Dân"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(947, 56)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(84, 31)
+        Me.Label10.TabIndex = 28
+        Me.Label10.Text = "Địa chỉ"
+        '
+        'txtDiaChi
+        '
+        Me.txtDiaChi.BackColor = System.Drawing.Color.Transparent
+        Me.txtDiaChi.BorderColor = System.Drawing.Color.IndianRed
+        Me.txtDiaChi.BorderRadius = 10
+        Me.txtDiaChi.BorderThickness = 2
+        Me.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtDiaChi.DefaultText = ""
+        Me.txtDiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.txtDiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.txtDiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtDiaChi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtDiaChi.ForeColor = System.Drawing.Color.Black
+        Me.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.txtDiaChi.Location = New System.Drawing.Point(1077, 48)
+        Me.txtDiaChi.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtDiaChi.Name = "txtDiaChi"
+        Me.txtDiaChi.PlaceholderForeColor = System.Drawing.Color.Black
+        Me.txtDiaChi.PlaceholderText = "Địa chỉ"
+        Me.txtDiaChi.SelectedText = ""
+        Me.txtDiaChi.Size = New System.Drawing.Size(263, 40)
+        Me.txtDiaChi.TabIndex = 27
+        '
+        'Guna2GradientButton1
+        '
+        Me.Guna2GradientButton1.BorderRadius = 15
+        Me.Guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(176, Byte), Integer))
+        Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
+        Me.Guna2GradientButton1.Location = New System.Drawing.Point(930, 188)
+        Me.Guna2GradientButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
+        Me.Guna2GradientButton1.Size = New System.Drawing.Size(167, 48)
+        Me.Guna2GradientButton1.TabIndex = 26
+        Me.Guna2GradientButton1.Text = "Refresh"
         '
         'timKiem
         '
@@ -482,173 +627,28 @@ Partial Class QuanLy
         Me.DataGridViewCCCD.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridViewCCCD.Name = "DataGridViewCCCD"
         Me.DataGridViewCCCD.RowHeadersWidth = 51
-        Me.DataGridViewCCCD.Size = New System.Drawing.Size(1373, 292)
+        Me.DataGridViewCCCD.Size = New System.Drawing.Size(1373, 381)
         Me.DataGridViewCCCD.TabIndex = 0
-        '
-        'Xoa
-        '
-        Me.Xoa.BackColor = System.Drawing.Color.Red
-        Me.Xoa.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Xoa.ForeColor = System.Drawing.Color.White
-        Me.Xoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Xoa.Location = New System.Drawing.Point(1231, 35)
-        Me.Xoa.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Xoa.Name = "Xoa"
-        Me.Xoa.Size = New System.Drawing.Size(180, 48)
-        Me.Xoa.TabIndex = 11
-        Me.Xoa.Text = "Đăng Xuất"
-        Me.Xoa.UseVisualStyleBackColor = False
-        '
-        'pnlVeHuy
-        '
-        Me.pnlVeHuy.BackColor = System.Drawing.Color.Transparent
-        Me.pnlVeHuy.Controls.Add(Me.lblVeHuyValue)
-        Me.pnlVeHuy.Controls.Add(Me.Label12)
-        Me.pnlVeHuy.FillColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.pnlVeHuy.Location = New System.Drawing.Point(574, 11)
-        Me.pnlVeHuy.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pnlVeHuy.Name = "pnlVeHuy"
-        Me.pnlVeHuy.Radius = 10
-        Me.pnlVeHuy.ShadowColor = System.Drawing.Color.Black
-        Me.pnlVeHuy.ShadowDepth = 10
-        Me.pnlVeHuy.ShadowShift = 0
-        Me.pnlVeHuy.Size = New System.Drawing.Size(251, 117)
-        Me.pnlVeHuy.TabIndex = 14
-        '
-        'lblVeHuyValue
-        '
-        Me.lblVeHuyValue.AutoSize = True
-        Me.lblVeHuyValue.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.lblVeHuyValue.ForeColor = System.Drawing.Color.White
-        Me.lblVeHuyValue.Location = New System.Drawing.Point(16, 52)
-        Me.lblVeHuyValue.Name = "lblVeHuyValue"
-        Me.lblVeHuyValue.Size = New System.Drawing.Size(69, 54)
-        Me.lblVeHuyValue.TabIndex = 9
-        Me.lblVeHuyValue.Text = "32"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(20, 15)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(172, 28)
-        Me.Label12.TabIndex = 9
-        Me.Label12.Text = "Số Người Vi Phạm"
-        '
-        'pnlVeDat
-        '
-        Me.pnlVeDat.BackColor = System.Drawing.Color.Transparent
-        Me.pnlVeDat.Controls.Add(Me.lblVeDatValue)
-        Me.pnlVeDat.Controls.Add(Me.Label5)
-        Me.pnlVeDat.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.pnlVeDat.Location = New System.Drawing.Point(901, 15)
-        Me.pnlVeDat.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.pnlVeDat.Name = "pnlVeDat"
-        Me.pnlVeDat.Radius = 10
-        Me.pnlVeDat.ShadowColor = System.Drawing.Color.Black
-        Me.pnlVeDat.ShadowDepth = 10
-        Me.pnlVeDat.ShadowShift = 0
-        Me.pnlVeDat.Size = New System.Drawing.Size(244, 117)
-        Me.pnlVeDat.TabIndex = 15
-        '
-        'lblVeDatValue
-        '
-        Me.lblVeDatValue.AutoSize = True
-        Me.lblVeDatValue.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.lblVeDatValue.ForeColor = System.Drawing.Color.White
-        Me.lblVeDatValue.Location = New System.Drawing.Point(32, 52)
-        Me.lblVeDatValue.Name = "lblVeDatValue"
-        Me.lblVeDatValue.Size = New System.Drawing.Size(46, 54)
-        Me.lblVeDatValue.TabIndex = 9
-        Me.lblVeDatValue.Text = "0"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(15, 15)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(208, 28)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Số Người Đã Tích Hợp"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Guna2GradientButton1
-        '
-        Me.Guna2GradientButton1.BorderRadius = 15
-        Me.Guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(176, Byte), Integer))
-        Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(156, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(176, Byte), Integer))
-        Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton1.Location = New System.Drawing.Point(930, 188)
-        Me.Guna2GradientButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
-        Me.Guna2GradientButton1.Size = New System.Drawing.Size(167, 48)
-        Me.Guna2GradientButton1.TabIndex = 26
-        Me.Guna2GradientButton1.Text = "Refresh"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(947, 56)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(84, 31)
-        Me.Label10.TabIndex = 28
-        Me.Label10.Text = "Địa chỉ"
-        '
-        'txtDiaChi
-        '
-        Me.txtDiaChi.BackColor = System.Drawing.Color.Transparent
-        Me.txtDiaChi.BorderColor = System.Drawing.Color.IndianRed
-        Me.txtDiaChi.BorderRadius = 10
-        Me.txtDiaChi.BorderThickness = 2
-        Me.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtDiaChi.DefaultText = ""
-        Me.txtDiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.txtDiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.txtDiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtDiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtDiaChi.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtDiaChi.ForeColor = System.Drawing.Color.Black
-        Me.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.txtDiaChi.Location = New System.Drawing.Point(1077, 48)
-        Me.txtDiaChi.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtDiaChi.Name = "txtDiaChi"
-        Me.txtDiaChi.PlaceholderForeColor = System.Drawing.Color.Black
-        Me.txtDiaChi.PlaceholderText = "Địa chỉ"
-        Me.txtDiaChi.SelectedText = ""
-        Me.txtDiaChi.Size = New System.Drawing.Size(263, 40)
-        Me.txtDiaChi.TabIndex = 27
         '
         'QuanLy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1424, 790)
+        Me.ClientSize = New System.Drawing.Size(1424, 890)
         Me.Controls.Add(Me.Guna2ShadowPanel1)
         Me.Controls.Add(Me.Guna2CustomGradientPanel1)
         Me.Name = "QuanLy"
         Me.Text = "Quản Lý - 9 Võ Nguyễn Đại Hiếu"
         Me.Guna2CustomGradientPanel1.ResumeLayout(False)
         Me.Guna2CustomGradientPanel1.PerformLayout()
+        Me.pnlVeDat.ResumeLayout(False)
+        Me.pnlVeDat.PerformLayout()
+        Me.pnlVeHuy.ResumeLayout(False)
+        Me.pnlVeHuy.PerformLayout()
         Me.Guna2ShadowPanel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridViewCCCD, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pnlVeHuy.ResumeLayout(False)
-        Me.pnlVeHuy.PerformLayout()
-        Me.pnlVeDat.ResumeLayout(False)
-        Me.pnlVeDat.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

@@ -57,21 +57,20 @@
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
@@ -127,18 +126,10 @@
     <Compile Include="Class\CongDanCCCD.vb" />
     <Compile Include="Class\CongDan_SaiPham.vb" />
     <Compile Include="Class\GiayToLienQuan.vb" />
-    <Compile Include="Class\QuanHuyen.vb" />
-    <Compile Include="Class\TinhTP.vb" />
-    <Compile Include="DatabaseConnection.vb" />
+
+    <Compile Include="SQL\DatabaseConnection.vb" />
     <Compile Include="SQL\CongDanCCCDDAO.vb" />
     <Compile Include="SQL\CongDanDAO.vb" />
-    <Compile Include="SQL\DiaChiDAO.vb" />
-    <Compile Include="DieuKhien.Designer.vb">
-      <DependentUpon>DieuKhien.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DieuKhien.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SQL\GiayToDAO.vb" />
     <Compile Include="HoSoLienQuan.Designer.vb">
       <DependentUpon>HoSoLienQuan.vb</DependentUpon>
@@ -183,9 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCaoNguoiDung_ViPham.resx">
       <DependentUpon>BaoCaoNguoiDung_ViPham.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DieuKhien.resx">
-      <DependentUpon>DieuKhien.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoSoLienQuan.resx">
       <DependentUpon>HoSoLienQuan.vb</DependentUpon>

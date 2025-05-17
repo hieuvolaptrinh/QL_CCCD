@@ -22,13 +22,11 @@ CREATE TABLE CongDanCCCD (
     hoTen NVARCHAR(100) NOT NULL,
     ngaySinh DATE NOT NULL,
     gioiTinh NVARCHAR(10) CHECK (GioiTinh IN (N'Nam', N'Nữ')),
-    danToc NVARCHAR(50),
-    tonGiao NVARCHAR(50),
     queQuan NVARCHAR(50),
     noiO NVARCHAR(50),
     ngayCap DATE NOT NULL,
     noiCap NVARCHAR(100) NOT NULL,
-    CHECK (NgayHetHan IS NULL OR NgayHetHan > NgayCap),
+
 );
 GO
 
