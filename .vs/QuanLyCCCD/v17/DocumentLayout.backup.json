@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\reportdscccd.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\reportdscccd.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\quanly.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\quanly.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\baocaonguoidung_vipham.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\baocaonguoidung_vipham.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\quanlycccd\\baocaocongdan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\baocaocongdan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\hosolienquan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\hosolienquan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\hosolienquan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\hosolienquan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\home.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\reporttest.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\reporttest.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|d:\\onedrive - university of technology and education\\dai_hoc\\2024-2025\\k\u00EC 2\\quanlycccd - c\u00E1 nhan\\quanlycccd\\baocaocongdan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\baocaocongdan.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\quanlycccd\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\quanlycccd\\databaseconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\databaseconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\quanlycccd\\sql\\congdancccddao.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\sql\\congdancccddao.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\quanlycccd\\class\\congdan_saipham.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\class\\congdan_saipham.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\quanlycccd\\dieukhien.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{13F56AF2-1AA5-4E92-8405-EB696C4E671D}|QuanLyCCCD\\QuanLyCCCD.vbproj|solutionrelative:quanlycccd\\dieukhien.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuanLy.vb [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\QuanLy.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\QuanLy.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\QuanLy.vb [Design]",
+              "RelativeToolTip": "QuanLyCCCD\\QuanLy.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-17T17:25:41.027Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaoCaoNguoiDung_ViPham.vb [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\BaoCaoNguoiDung_ViPham.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\BaoCaoNguoiDung_ViPham.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\BaoCaoNguoiDung_ViPham.vb [Design]",
+              "RelativeToolTip": "QuanLyCCCD\\BaoCaoNguoiDung_ViPham.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-17T17:25:31.965Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HoSoLienQuan.vb [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\HoSoLienQuan.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\HoSoLienQuan.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\HoSoLienQuan.vb [Design]*",
+              "RelativeToolTip": "QuanLyCCCD\\HoSoLienQuan.vb [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-17T17:24:45.799Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\Form1.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\Form1.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\Form1.vb [Design]",
+              "RelativeToolTip": "QuanLyCCCD\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-17T17:24:38.253Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReportDSCCCD.rdlc [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\ReportDSCCCD.rdlc",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\ReportDSCCCD.rdlc",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\ReportDSCCCD.rdlc [Design]",
+              "RelativeToolTip": "QuanLyCCCD\\ReportDSCCCD.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2025-05-17T17:24:10.084Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HoSoLienQuan.vb",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\HoSoLienQuan.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\HoSoLienQuan.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\HoSoLienQuan.vb*",
+              "RelativeToolTip": "QuanLyCCCD\\HoSoLienQuan.vb*",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAcwO0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-17T17:24:56.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Home.vb [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\Home.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\Home.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\Home.vb [Design]",
+              "RelativeToolTip": "QuanLyCCCD\\Home.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-17T17:24:30.807Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaoCaoCongDan.vb [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\BaoCaoCongDan.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\BaoCaoCongDan.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\BaoCaoCongDan.vb [Design]",
+              "RelativeToolTip": "QuanLyCCCD\\BaoCaoCongDan.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-14T05:14:47.252Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReportTest.rdlc [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\ReportTest.rdlc",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\ReportTest.rdlc",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\ReportTest.rdlc [Design]",
+              "RelativeToolTip": "QuanLyCCCD\\ReportTest.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2025-05-17T17:24:09.406Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationEvents.vb",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\ApplicationEvents.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\ApplicationEvents.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\ApplicationEvents.vb",
+              "RelativeToolTip": "QuanLyCCCD\\ApplicationEvents.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-14T05:19:35.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BaoCaoCongDan.vb",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\BaoCaoCongDan.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\BaoCaoCongDan.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\BaoCaoCongDan.vb",
+              "RelativeToolTip": "QuanLyCCCD\\BaoCaoCongDan.vb",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-14T05:14:48.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CongDan_SaiPham.vb",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\Class\\CongDan_SaiPham.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\Class\\CongDan_SaiPham.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\Class\\CongDan_SaiPham.vb",
+              "RelativeToolTip": "QuanLyCCCD\\Class\\CongDan_SaiPham.vb",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAkwJAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-13T17:17:05.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DatabaseConnection.vb",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\DatabaseConnection.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\DatabaseConnection.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\DatabaseConnection.vb",
+              "RelativeToolTip": "QuanLyCCCD\\DatabaseConnection.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-13T17:23:19.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CongDanCCCDDAO.vb",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\SQL\\CongDanCCCDDAO.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\SQL\\CongDanCCCDDAO.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\SQL\\CongDanCCCDDAO.vb",
+              "RelativeToolTip": "QuanLyCCCD\\SQL\\CongDanCCCDDAO.vb",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAkwL8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-13T17:23:12.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DieuKhien.vb [Design]",
+              "DocumentMoniker": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\DieuKhien.vb",
+              "RelativeDocumentMoniker": "QuanLyCCCD\\DieuKhien.vb",
+              "ToolTip": "D:\\OneDrive - University of Technology and Education\\Dai_hoc\\2024-2025\\k\u00EC 2\\QuanLyCCCD - c\u00E1 nhan\\QuanLyCCCD\\DieuKhien.vb [Design]",
+              "RelativeToolTip": "QuanLyCCCD\\DieuKhien.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-13T17:23:19.131Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 51,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
