@@ -9,10 +9,6 @@ Public Class CongDan_SaiPham
     Private mucPhatField As Decimal
     Private trangThaiField As String
     Private hoTenField As String
-    Private ngaySinhField As Date
-    Private gioiTinhField As String
-    Private queQuanField As String
-    Private noiOField As String
 
     Public Property MaSaiPham As String
         Get
@@ -86,41 +82,30 @@ Public Class CongDan_SaiPham
         End Set
     End Property
 
-    Public Property NgaySinh As Date
-        Get
-            Return ngaySinhField
-        End Get
-        Set(value As Date)
-            ngaySinhField = value
-        End Set
-    End Property
+    Public Sub New()
+        ' Khởi tạo giá trị mặc định
+        maSaiPhamField = ""
+        soCCCDField = ""
+        loiSaiPhamField = ""
+        ngaySaiField = Date.Now
+        noiSaiPhamField = ""
+        mucPhatField = 0
+        trangThaiField = "Chưa xử lý"
+        hoTenField = ""
+    End Sub
 
-    Public Property GioiTinh As String
-        Get
-            Return gioiTinhField
-        End Get
-        Set(value As String)
-            gioiTinhField = value
-        End Set
-    End Property
-
-    Public Property QueQuan As String
-        Get
-            Return queQuanField
-        End Get
-        Set(value As String)
-            queQuanField = value
-        End Set
-    End Property
-
-    Public Property NoiO As String
-        Get
-            Return noiOField
-        End Get
-        Set(value As String)
-            noiOField = value
-        End Set
-    End Property
+    Public Sub New(maSaiPham As String, soCCCD As String, loiSaiPham As String, 
+                  ngaySai As Date, noiSaiPham As String, mucPhat As Decimal, 
+                  trangThai As String, hoTen As String)
+        Me.maSaiPhamField = maSaiPham
+        Me.soCCCDField = soCCCD
+        Me.loiSaiPhamField = loiSaiPham
+        Me.ngaySaiField = ngaySai
+        Me.noiSaiPhamField = noiSaiPham
+        Me.mucPhatField = mucPhat
+        Me.trangThaiField = trangThai
+        Me.hoTenField = hoTen
+    End Sub
 
     Public Shared Function GetAllCongDan_SP() As List(Of CongDan_SaiPham)
         Dim result As New List(Of CongDan_SaiPham)()
@@ -148,10 +133,7 @@ Public Class CongDan_SaiPham
                 cdsp.TrangThai = reader("TrangThai").ToString()
 
                 cdsp.HoTen = reader("HoTen").ToString()
-                cdsp.NgaySinh = Convert.ToDateTime(reader("NgaySinh"))
-                cdsp.GioiTinh = reader("GioiTinh").ToString()
-                cdsp.QueQuan = If(IsDBNull(reader("QueQuan")), String.Empty, reader("QueQuan").ToString())
-                cdsp.NoiO = If(IsDBNull(reader("NoiO")), String.Empty, reader("NoiO").ToString())
+
 
                 result.Add(cdsp)
             End While

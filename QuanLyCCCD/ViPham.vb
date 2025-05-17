@@ -1,275 +1,171 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class ViPham
-    Private connectionString As String = "Data Source=.\SQLEXPRESS;Initial Catalog=QLCCCD;Integrated Security=True"
-    Private connection As SqlConnection
-    Private command As SqlCommand
-    Private adapter As SqlDataAdapter
-    Private dataTable As DataTable
+    Private viPhamDAO As ViPhamDao
+    Private dsSaiPham As List(Of CongDan_SaiPham)
+
+    Public Sub New()
+        InitializeComponent()
+        InitializeDAO()
+    End Sub
+
+    Private Sub InitializeDAO()
+        Try
+            viPhamDAO = New ViPhamDao()
+        Catch ex As Exception
+            MessageBox.Show("Lỗi khởi tạo kết nối database: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
     Private Sub ViPham_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Initialize database connection
-        connection = New SqlConnection(connectionString)
+        Try
+            ' Initialize ComboBox items
+            cboTrangThai.Items.AddRange({"Đã xử lý", "Chưa xử lý", "Đang xử lý"})
+            cboTrangThai.SelectedIndex = 0
+            cboTrangThaiTimKiem.SelectedIndex = 0
 
-        ' Initialize ComboBox items
-        cboTrangThai.Items.AddRange({"Đã xử lý", "Chưa xử lý", "Đang xử lý"})
-        cboTrangThai.SelectedIndex = 0
+            ' Load data to DataGridView
+            LoadData()
 
-        ' Load data to DataGridView
-        LoadData()
-
-        ' Configure DataGridView columns
-        ConfigureDataGridView()
+            ' Configure DataGridView columns
+            ConfigureDataGridView()
+        Catch ex As Exception
+            MessageBox.Show("Lỗi khi tải form: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub LoadData()
         Try
-            connection.Open()
-            Dim query As String = "SELECT sp.maSaiPham, cd.hoTen, sp.loiSaiPham, sp.ngaySai, " &
-                                "sp.noiSaiPham, sp.mucPhat, sp.trangThai, sp.soCCCD " &
-                                "FROM SaiPham sp INNER JOIN CongDanCCCD cd ON sp.soCCCD = cd.soCCCD"
+            If viPhamDAO Is Nothing Then
+                InitializeDAO()
+            End If
 
-            adapter = New SqlDataAdapter(query, connection)
-            dataTable = New DataTable()
-            adapter.Fill(dataTable)
-            dgvSaiPham.DataSource = dataTable
-
+            If viPhamDAO IsNot Nothing Then
+                dsSaiPham = viPhamDAO.GetAllCongDanSaiPham()
+                dgvSaiPham.DataSource = dsSaiPham
+            Else
+                MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
         Catch ex As Exception
             MessageBox.Show("Lỗi khi tải dữ liệu: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            connection.Close()
         End Try
     End Sub
 
     Private Sub ConfigureDataGridView()
         With dgvSaiPham
-            .Columns("maSaiPham").HeaderText = "Mã sai phạm"
-            .Columns("hoTen").HeaderText = "Họ tên"
-            .Columns("loiSaiPham").HeaderText = "Lỗi sai phạm"
-            .Columns("ngaySai").HeaderText = "Ngày sai phạm"
-            .Columns("noiSaiPham").HeaderText = "Nơi sai phạm"
-            .Columns("mucPhat").HeaderText = "Mức phạt"
-            .Columns("trangThai").HeaderText = "Trạng thái"
-            .Columns("soCCCD").HeaderText = "Số CCCD"
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+            .AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+
+
+            .Columns("MaSaiPham").HeaderText = "Mã Vi Phạm"
+            .Columns("SoCCCD").HeaderText = "Số CCCD"
+            .Columns("HoTen").HeaderText = "Tên Công Dân"
+            .Columns("LoiSaiPham").HeaderText = "Lỗi Vi Phạm"
+            .Columns("NgaySai").HeaderText = "Ngày Vi Phạm"
+            .Columns("NoiSaiPham").HeaderText = "Địa Điểm Vi Phạm"
+            .Columns("MucPhat").HeaderText = "Mức Phạt (VNĐ)"
+            .Columns("TrangThai").HeaderText = "Trạng Thái XL"
+
+
+            .Columns("NgaySai").DefaultCellStyle.Format = "dd/MM/yyyy"
+            .Columns("MucPhat").DefaultCellStyle.Format = "N0"
+            .Columns("MucPhat").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+
+            .EnableHeadersVisualStyles = False
+            .ColumnHeadersDefaultCellStyle.Font = New Font("Segoe UI", 10, FontStyle.Bold)
+            .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 123, 255) ' Màu xanh dương
+            .ColumnHeadersDefaultCellStyle.ForeColor = Color.White ' Chữ màu trắng
+            .ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .ColumnHeadersHeight = 40
+
+
+            .DefaultCellStyle.Font = New Font("Segoe UI", 9)
+            .DefaultCellStyle.Padding = New Padding(2)
+            .RowHeadersVisible = False
+
+
+            .Columns("MaSaiPham").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("SoCCCD").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("NgaySai").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            .Columns("TrangThai").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
             For Each col As DataGridViewColumn In .Columns
-                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                col.SortMode = DataGridViewColumnSortMode.NotSortable
             Next
+
+            .Columns("MaSaiPham").FillWeight = 10
+            .Columns("SoCCCD").FillWeight = 12
+            .Columns("HoTen").FillWeight = 15
+            .Columns("LoiSaiPham").FillWeight = 20
+            .Columns("NgaySai").FillWeight = 12
+            .Columns("NoiSaiPham").FillWeight = 15
+            .Columns("MucPhat").FillWeight = 10
+            .Columns("TrangThai").FillWeight = 10
+
+
+            AddHandler .CellFormatting, AddressOf dgvSaiPham_CellFormatting
         End With
+    End Sub
+
+    Private Sub dgvSaiPham_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs)
+        If e.ColumnIndex = dgvSaiPham.Columns("TrangThai").Index AndAlso e.Value IsNot Nothing Then
+            Select Case e.Value.ToString()
+                Case "Đã xử lý"
+                    e.CellStyle.ForeColor = Color.Green
+                Case "Chưa xử lý"
+                    e.CellStyle.ForeColor = Color.Red
+                Case "Đang xử lý"
+                    e.CellStyle.ForeColor = Color.Orange
+            End Select
+            e.CellStyle.Font = New Font("Segoe UI", 9, FontStyle.Bold)
+        End If
     End Sub
 
     Private Sub dgvSaiPham_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSaiPham.CellClick
         If e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow = dgvSaiPham.Rows(e.RowIndex)
-            txtMaSaiPham.Text = row.Cells("maSaiPham").Value.ToString()
-            txtSoCCCD.Text = row.Cells("soCCCD").Value.ToString()
-            txtLoiSaiPham.Text = row.Cells("loiSaiPham").Value.ToString()
-            dtpNgaySai.Value = CDate(row.Cells("ngaySai").Value)
-            txtNoiSaiPham.Text = row.Cells("noiSaiPham").Value.ToString()
-            txtMucPhat.Text = row.Cells("mucPhat").Value.ToString()
-            cboTrangThai.Text = row.Cells("trangThai").Value.ToString()
+            Dim saiPham As CongDan_SaiPham = DirectCast(dgvSaiPham.Rows(e.RowIndex).DataBoundItem, CongDan_SaiPham)
+            txtMaSaiPham.Text = saiPham.MaSaiPham
+            txtSoCCCD.Text = saiPham.SoCCCD
+            txtLoiSaiPham.Text = saiPham.LoiSaiPham
+            dtpNgaySai.Value = saiPham.NgaySai
+            txtNoiSaiPham.Text = saiPham.NoiSaiPham
+            txtMucPhat.Text = saiPham.MucPhat.ToString()
+            cboTrangThai.Text = saiPham.TrangThai
         End If
     End Sub
 
-    Private Sub btnThem_Click(sender As Object, e As EventArgs) Handles btnThem.Click
-        If ValidateInput() Then
-            Try
-                connection.Open()
-                command = New SqlCommand("INSERT INTO SaiPham (maSaiPham, soCCCD, loiSaiPham, ngaySai, noiSaiPham, mucPhat, trangThai) " &
-                                       "VALUES (@maSaiPham, @soCCCD, @loiSaiPham, @ngaySai, @noiSaiPham, @mucPhat, @trangThai)", connection)
-
-                With command.Parameters
-                    .AddWithValue("@maSaiPham", txtMaSaiPham.Text)
-                    .AddWithValue("@soCCCD", txtSoCCCD.Text)
-                    .AddWithValue("@loiSaiPham", txtLoiSaiPham.Text)
-                    .AddWithValue("@ngaySai", dtpNgaySai.Value)
-                    .AddWithValue("@noiSaiPham", txtNoiSaiPham.Text)
-                    .AddWithValue("@mucPhat", Convert.ToDecimal(txtMucPhat.Text))
-                    .AddWithValue("@trangThai", cboTrangThai.Text)
-                End With
-
-                command.ExecuteNonQuery()
-                MessageBox.Show("Thêm sai phạm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                LoadData()
-                ClearInputs()
-
-            Catch ex As Exception
-                MessageBox.Show("Lỗi khi thêm sai phạm: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Finally
-                connection.Close()
-            End Try
-        End If
-    End Sub
-
-    Private Sub btnSua_Click(sender As Object, e As EventArgs) Handles btnSua.Click
-        If ValidateInput() Then
-            Try
-                connection.Open()
-                command = New SqlCommand("UPDATE SaiPham SET soCCCD = @soCCCD, loiSaiPham = @loiSaiPham, " &
-                                       "ngaySai = @ngaySai, noiSaiPham = @noiSaiPham, mucPhat = @mucPhat, " &
-                                       "trangThai = @trangThai WHERE maSaiPham = @maSaiPham", connection)
-
-                With command.Parameters
-                    .AddWithValue("@maSaiPham", txtMaSaiPham.Text)
-                    .AddWithValue("@soCCCD", txtSoCCCD.Text)
-                    .AddWithValue("@loiSaiPham", txtLoiSaiPham.Text)
-                    .AddWithValue("@ngaySai", dtpNgaySai.Value)
-                    .AddWithValue("@noiSaiPham", txtNoiSaiPham.Text)
-                    .AddWithValue("@mucPhat", Convert.ToDecimal(txtMucPhat.Text))
-                    .AddWithValue("@trangThai", cboTrangThai.Text)
-                End With
-
-                command.ExecuteNonQuery()
-                MessageBox.Show("Cập nhật sai phạm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                LoadData()
-                ClearInputs()
-
-            Catch ex As Exception
-                MessageBox.Show("Lỗi khi cập nhật sai phạm: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Finally
-                connection.Close()
-            End Try
-        End If
-    End Sub
-
-    Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoa.Click
-        If String.IsNullOrEmpty(txtMaSaiPham.Text) Then
-            MessageBox.Show("Vui lòng chọn sai phạm cần xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Return
-        End If
-
-        If MessageBox.Show("Bạn có chắc chắn muốn xóa sai phạm này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-            Try
-                connection.Open()
-                command = New SqlCommand("DELETE FROM SaiPham WHERE maSaiPham = @maSaiPham", connection)
-                command.Parameters.AddWithValue("@maSaiPham", txtMaSaiPham.Text)
-                command.ExecuteNonQuery()
-
-                MessageBox.Show("Xóa sai phạm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                LoadData()
-                ClearInputs()
-
-            Catch ex As Exception
-                MessageBox.Show("Lỗi khi xóa sai phạm: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Finally
-                connection.Close()
-            End Try
-        End If
-
-
-    Private Sub btnTimKiem_Click(sender As Object, e As EventArgs) Handles btnTimKiem.Click
+    Private Sub btnTK_Click(sender As Object, e As EventArgs) Handles btnTK.Click
         Try
-            connection.Open()
-            Dim searchText As String = txtTimKiem.Text.Trim()
-            Dim trangThai As String = cboTrangThaiTimKiem.Text
-
-            Dim query As String = "SELECT sp.maSaiPham, cd.hoTen, sp.loiSaiPham, sp.ngaySai, " &
-                                "sp.noiSaiPham, sp.mucPhat, sp.trangThai, sp.soCCCD " &
-                                "FROM SaiPham sp INNER JOIN CongDanCCCD cd ON sp.soCCCD = cd.soCCCD " &
-                                "WHERE (cd.hoTen LIKE @search OR sp.soCCCD LIKE @search)"
-
-            If trangThai <> "Tất cả trạng thái" Then
-                query &= " AND sp.trangThai = @trangThai"
+            If viPhamDAO Is Nothing Then
+                InitializeDAO()
             End If
 
-            adapter = New SqlDataAdapter(query, connection)
-            adapter.SelectCommand.Parameters.AddWithValue("@search", "%" & searchText & "%")
+            If viPhamDAO IsNot Nothing Then
+                Dim tenNguoiDung As String = txtTenCongDan.Text.Trim()
+                Dim trangThai As String = cboTrangThaiTimKiem.Text
 
-            If trangThai <> "Tất cả trạng thái" Then
-                adapter.SelectCommand.Parameters.AddWithValue("@trangThai", trangThai)
+                dsSaiPham = viPhamDAO.GetCongDanSaiPhamByFilter(tenNguoiDung, trangThai)
+                dgvSaiPham.DataSource = dsSaiPham
+            Else
+                MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
-
-            DataTable = New DataTable()
-            adapter.Fill(DataTable)
-            dgvSaiPham.DataSource = DataTable
-
         Catch ex As Exception
             MessageBox.Show("Lỗi khi tìm kiếm: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            connection.Close()
         End Try
     End Sub
 
-    Private Sub txtTimKiem_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTimKiem.KeyPress
+    Private Sub txtTenCongDan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTenCongDan.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
-            btnTimKiem.PerformClick()
+            btnTK.PerformClick()
             e.Handled = True
         End If
     End Sub
 
     Private Sub cboTrangThaiTimKiem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTrangThaiTimKiem.SelectedIndexChanged
-        btnTimKiem.PerformClick()
+        btnTK.PerformClick()
     End Sub
 
-    Private Sub ViPham_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Initialize database connection
-        connection = New SqlConnection(connectionString)
+    Private Sub xuatReport_Click(sender As Object, e As EventArgs) Handles xuatReport.Click
 
-        ' Initialize ComboBox items
-        cboTrangThai.Items.AddRange({"Đã xử lý", "Chưa xử lý", "Đang xử lý"})
-        cboTrangThai.SelectedIndex = 0
-
-        cboTrangThaiTimKiem.SelectedIndex = 0
-
-        ' Load data to DataGridView
-        LoadData()
-
-        ' Configure DataGridView columns
-        ConfigureDataGridView()
-    End Sub
-
-    Private Sub ConfigureDataGridView()
-        With dgvSaiPham
-            .Columns("maSaiPham").HeaderText = "Mã sai phạm"
-            .Columns("hoTen").HeaderText = "Họ tên"
-            .Columns("loiSaiPham").HeaderText = "Lỗi sai phạm"
-            .Columns("ngaySai").HeaderText = "Ngày sai phạm"
-            .Columns("noiSaiPham").HeaderText = "Nơi sai phạm"
-            .Columns("mucPhat").HeaderText = "Mức phạt"
-            .Columns("trangThai").HeaderText = "Trạng thái"
-            .Columns("soCCCD").HeaderText = "Số CCCD"
-
-            ' Set column widths
-            .Columns("maSaiPham").Width = 100
-            .Columns("hoTen").Width = 150
-            .Columns("loiSaiPham").Width = 200
-            .Columns("ngaySai").Width = 100
-            .Columns("noiSaiPham").Width = 150
-            .Columns("mucPhat").Width = 100
-            .Columns("trangThai").Width = 100
-            .Columns("soCCCD").Width = 100
-
-            ' Format date column
-            .Columns("ngaySai").DefaultCellStyle.Format = "dd/MM/yyyy"
-
-            ' Format currency column
-            .Columns("mucPhat").DefaultCellStyle.Format = "N0"
-            .Columns("mucPhat").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
-
-            ' Set alternating row colors
-            .AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 247, 250)
-            .DefaultCellStyle.BackColor = Color.White
-            .DefaultCellStyle.SelectionBackColor = Color.FromArgb(94, 148, 255)
-            .DefaultCellStyle.SelectionForeColor = Color.White
-
-            ' Other formatting
-            .EnableHeadersVisualStyles = False
-            .ColumnHeadersDefaultCellStyle.Font = New Font("Segoe UI", 10, FontStyle.Bold)
-            .ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(94, 148, 255)
-            .ColumnHeadersDefaultCellStyle.ForeColor = Color.White
-            .ColumnHeadersHeight = 40
-            .RowTemplate.Height = 30
-
-            For Each col As DataGridViewColumn In .Columns
-                col.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-                col.SortMode = DataGridViewColumnSortMode.Automatic
-            Next
-        End With
-    End Sub
-
-    Private Sub btnTK_Click(sender As Object, e As EventArgs) Handles btnTK.Click
-        'tìm kiếm theo người dùng và trạng thái sai phạm
-        Dim tenNguoiDung As String = txtTenCongDan.Text.Trim()
-        Dim trangThai As String = cboTrangThaiTimKiem.Text
     End Sub
 End Class

@@ -128,7 +128,6 @@
     <Compile Include="Class\GiayToLienQuan.vb" />
     <Compile Include="SQL\DatabaseConnection.vb" />
     <Compile Include="SQL\CongDanCCCDDAO.vb" />
-    <Compile Include="SQL\CongDanDAO.vb" />
     <Compile Include="SQL\GiayToDAO.vb" />
     <Compile Include="HoSoLienQuan.Designer.vb">
       <DependentUpon>HoSoLienQuan.vb</DependentUpon>

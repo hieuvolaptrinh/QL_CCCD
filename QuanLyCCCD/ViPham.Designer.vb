@@ -31,8 +31,12 @@ Partial Class ViPham
         Me.btnTimKiem = New Guna.UI2.WinForms.Guna2Button()
         Me.lblMaSaiPham = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.pnlSearch = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.xuatReport = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnTK = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.cboTrangThaiTimKiem = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.lblSearchHeader = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.txtTenCongDan = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -44,22 +48,18 @@ Partial Class ViPham
         Me.txtLoiSaiPham = New Guna.UI2.WinForms.Guna2TextBox()
         Me.txtSoCCCD = New Guna.UI2.WinForms.Guna2TextBox()
         Me.pnlButtons = New Guna.UI2.WinForms.Guna2Panel()
-        Me.btnXoa = New Guna.UI2.WinForms.Guna2Button()
-        Me.btnSua = New Guna.UI2.WinForms.Guna2Button()
         Me.btnThem = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnSua = New Guna.UI2.WinForms.Guna2Button()
+        Me.btnXoa = New Guna.UI2.WinForms.Guna2Button()
         Me.pnlInput = New Guna.UI2.WinForms.Guna2Panel()
-        Me.lblTrangThai = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lblMucPhat = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lblNoiSaiPham = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lblNgaySai = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lblLoiSaiPham = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.lblSoCCCD = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.lblHeader = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.txtTenCongDan = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnTK = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.xuatReport = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblSoCCCD = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblLoiSaiPham = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblNgaySai = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblNoiSaiPham = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblMucPhat = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.lblTrangThai = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.dgvSaiPham, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlSearch.SuspendLayout()
         Me.Guna2CustomGradientPanel1.SuspendLayout()
@@ -109,7 +109,7 @@ Partial Class ViPham
         Me.dgvSaiPham.Name = "dgvSaiPham"
         Me.dgvSaiPham.RowHeadersVisible = False
         Me.dgvSaiPham.RowHeadersWidth = 51
-        Me.dgvSaiPham.Size = New System.Drawing.Size(863, 367)
+        Me.dgvSaiPham.Size = New System.Drawing.Size(994, 367)
         Me.dgvSaiPham.TabIndex = 3
         Me.dgvSaiPham.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White
         Me.dgvSaiPham.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -183,8 +183,56 @@ Partial Class ViPham
         Me.pnlSearch.Name = "pnlSearch"
         Me.pnlSearch.ShadowDecoration.Depth = 5
         Me.pnlSearch.ShadowDecoration.Enabled = True
-        Me.pnlSearch.Size = New System.Drawing.Size(865, 242)
+        Me.pnlSearch.Size = New System.Drawing.Size(996, 242)
         Me.pnlSearch.TabIndex = 2
+        '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(20, 82)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(121, 25)
+        Me.Guna2HtmlLabel2.TabIndex = 14
+        Me.Guna2HtmlLabel2.Text = "Tên Công Dân:"
+        '
+        'xuatReport
+        '
+        Me.xuatReport.BackColor = System.Drawing.Color.Transparent
+        Me.xuatReport.BorderRadius = 15
+        Me.xuatReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.xuatReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.xuatReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.xuatReport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.xuatReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.xuatReport.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.xuatReport.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.xuatReport.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.xuatReport.ForeColor = System.Drawing.Color.White
+        Me.xuatReport.Location = New System.Drawing.Point(766, 169)
+        Me.xuatReport.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.xuatReport.Name = "xuatReport"
+        Me.xuatReport.Size = New System.Drawing.Size(163, 56)
+        Me.xuatReport.TabIndex = 13
+        Me.xuatReport.Text = "Xuất Báo Cáo"
+        '
+        'btnTK
+        '
+        Me.btnTK.BorderRadius = 15
+        Me.btnTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnTK.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnTK.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.btnTK.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.btnTK.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.btnTK.ForeColor = System.Drawing.Color.White
+        Me.btnTK.Location = New System.Drawing.Point(766, 61)
+        Me.btnTK.Name = "btnTK"
+        Me.btnTK.Size = New System.Drawing.Size(168, 56)
+        Me.btnTK.TabIndex = 10
+        Me.btnTK.Text = "Tìm Kiếm"
         '
         'cboTrangThaiTimKiem
         '
@@ -198,7 +246,7 @@ Partial Class ViPham
         Me.cboTrangThaiTimKiem.ForeColor = System.Drawing.Color.Black
         Me.cboTrangThaiTimKiem.ItemHeight = 30
         Me.cboTrangThaiTimKiem.Items.AddRange(New Object() {"Tất cả trạng thái", "Đã xử lý", "Chưa xử lý", "Đang xử lý"})
-        Me.cboTrangThaiTimKiem.Location = New System.Drawing.Point(33, 93)
+        Me.cboTrangThaiTimKiem.Location = New System.Drawing.Point(522, 81)
         Me.cboTrangThaiTimKiem.Name = "cboTrangThaiTimKiem"
         Me.cboTrangThaiTimKiem.Size = New System.Drawing.Size(200, 36)
         Me.cboTrangThaiTimKiem.StartIndex = 0
@@ -215,6 +263,21 @@ Partial Class ViPham
         Me.lblSearchHeader.TabIndex = 0
         Me.lblSearchHeader.Text = "TÌM KIẾM SAI PHẠM"
         '
+        'txtTenCongDan
+        '
+        Me.txtTenCongDan.BorderColor = System.Drawing.Color.Black
+        Me.txtTenCongDan.BorderRadius = 5
+        Me.txtTenCongDan.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTenCongDan.DefaultText = ""
+        Me.txtTenCongDan.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtTenCongDan.Location = New System.Drawing.Point(182, 72)
+        Me.txtTenCongDan.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtTenCongDan.Name = "txtTenCongDan"
+        Me.txtTenCongDan.PlaceholderText = ""
+        Me.txtTenCongDan.SelectedText = ""
+        Me.txtTenCongDan.Size = New System.Drawing.Size(300, 45)
+        Me.txtTenCongDan.TabIndex = 1
+        '
         'Guna2CustomGradientPanel1
         '
         Me.Guna2CustomGradientPanel1.Controls.Add(Me.PictureBox2)
@@ -227,7 +290,7 @@ Partial Class ViPham
         Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(3, 3)
         Me.Guna2CustomGradientPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(1346, 104)
+        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(1470, 104)
         Me.Guna2CustomGradientPanel1.TabIndex = 10
         '
         'PictureBox2
@@ -371,17 +434,17 @@ Partial Class ViPham
         Me.pnlButtons.Size = New System.Drawing.Size(400, 50)
         Me.pnlButtons.TabIndex = 1
         '
-        'btnXoa
+        'btnThem
         '
-        Me.btnXoa.BorderRadius = 18
-        Me.btnXoa.FillColor = System.Drawing.Color.Red
-        Me.btnXoa.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnXoa.ForeColor = System.Drawing.Color.White
-        Me.btnXoa.Location = New System.Drawing.Point(270, 7)
-        Me.btnXoa.Name = "btnXoa"
-        Me.btnXoa.Size = New System.Drawing.Size(120, 36)
-        Me.btnXoa.TabIndex = 2
-        Me.btnXoa.Text = "Xóa"
+        Me.btnThem.BorderRadius = 18
+        Me.btnThem.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnThem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnThem.ForeColor = System.Drawing.Color.White
+        Me.btnThem.Location = New System.Drawing.Point(10, 7)
+        Me.btnThem.Name = "btnThem"
+        Me.btnThem.Size = New System.Drawing.Size(120, 36)
+        Me.btnThem.TabIndex = 0
+        Me.btnThem.Text = "Thêm"
         '
         'btnSua
         '
@@ -395,17 +458,17 @@ Partial Class ViPham
         Me.btnSua.TabIndex = 1
         Me.btnSua.Text = "Sửa"
         '
-        'btnThem
+        'btnXoa
         '
-        Me.btnThem.BorderRadius = 18
-        Me.btnThem.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.btnThem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnThem.ForeColor = System.Drawing.Color.White
-        Me.btnThem.Location = New System.Drawing.Point(10, 7)
-        Me.btnThem.Name = "btnThem"
-        Me.btnThem.Size = New System.Drawing.Size(120, 36)
-        Me.btnThem.TabIndex = 0
-        Me.btnThem.Text = "Thêm"
+        Me.btnXoa.BorderRadius = 18
+        Me.btnXoa.FillColor = System.Drawing.Color.Red
+        Me.btnXoa.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.btnXoa.ForeColor = System.Drawing.Color.White
+        Me.btnXoa.Location = New System.Drawing.Point(270, 7)
+        Me.btnXoa.Name = "btnXoa"
+        Me.btnXoa.Size = New System.Drawing.Size(120, 36)
+        Me.btnXoa.TabIndex = 2
+        Me.btnXoa.Text = "Xóa"
         '
         'pnlInput
         '
@@ -436,76 +499,6 @@ Partial Class ViPham
         Me.pnlInput.Size = New System.Drawing.Size(444, 618)
         Me.pnlInput.TabIndex = 0
         '
-        'lblTrangThai
-        '
-        Me.lblTrangThai.BackColor = System.Drawing.Color.Transparent
-        Me.lblTrangThai.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTrangThai.Location = New System.Drawing.Point(29, 469)
-        Me.lblTrangThai.Name = "lblTrangThai"
-        Me.lblTrangThai.Size = New System.Drawing.Size(91, 25)
-        Me.lblTrangThai.TabIndex = 12
-        Me.lblTrangThai.Text = "Trạng thái:"
-        '
-        'lblMucPhat
-        '
-        Me.lblMucPhat.BackColor = System.Drawing.Color.Transparent
-        Me.lblMucPhat.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMucPhat.Location = New System.Drawing.Point(29, 409)
-        Me.lblMucPhat.Name = "lblMucPhat"
-        Me.lblMucPhat.Size = New System.Drawing.Size(85, 25)
-        Me.lblMucPhat.TabIndex = 10
-        Me.lblMucPhat.Text = "Mức phạt:"
-        '
-        'lblNoiSaiPham
-        '
-        Me.lblNoiSaiPham.BackColor = System.Drawing.Color.Transparent
-        Me.lblNoiSaiPham.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNoiSaiPham.Location = New System.Drawing.Point(29, 349)
-        Me.lblNoiSaiPham.Name = "lblNoiSaiPham"
-        Me.lblNoiSaiPham.Size = New System.Drawing.Size(114, 25)
-        Me.lblNoiSaiPham.TabIndex = 8
-        Me.lblNoiSaiPham.Text = "Nơi sai phạm:"
-        '
-        'lblNgaySai
-        '
-        Me.lblNgaySai.BackColor = System.Drawing.Color.Transparent
-        Me.lblNgaySai.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNgaySai.Location = New System.Drawing.Point(29, 289)
-        Me.lblNgaySai.Name = "lblNgaySai"
-        Me.lblNgaySai.Size = New System.Drawing.Size(127, 25)
-        Me.lblNgaySai.TabIndex = 6
-        Me.lblNgaySai.Text = "Ngày sai phạm:"
-        '
-        'lblLoiSaiPham
-        '
-        Me.lblLoiSaiPham.BackColor = System.Drawing.Color.Transparent
-        Me.lblLoiSaiPham.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblLoiSaiPham.Location = New System.Drawing.Point(29, 229)
-        Me.lblLoiSaiPham.Name = "lblLoiSaiPham"
-        Me.lblLoiSaiPham.Size = New System.Drawing.Size(109, 25)
-        Me.lblLoiSaiPham.TabIndex = 4
-        Me.lblLoiSaiPham.Text = "Lỗi sai phạm:"
-        '
-        'lblSoCCCD
-        '
-        Me.lblSoCCCD.BackColor = System.Drawing.Color.Transparent
-        Me.lblSoCCCD.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSoCCCD.Location = New System.Drawing.Point(29, 169)
-        Me.lblSoCCCD.Name = "lblSoCCCD"
-        Me.lblSoCCCD.Size = New System.Drawing.Size(79, 25)
-        Me.lblSoCCCD.TabIndex = 2
-        Me.lblSoCCCD.Text = "Số CCCD:"
-        '
-        'Guna2HtmlLabel1
-        '
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(29, 104)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(112, 25)
-        Me.Guna2HtmlLabel1.TabIndex = 2
-        Me.Guna2HtmlLabel1.Text = "Mã Sai Phạm:"
-        '
         'lblHeader
         '
         Me.lblHeader.BackColor = System.Drawing.Color.Transparent
@@ -518,73 +511,80 @@ Partial Class ViPham
         Me.lblHeader.Text = "THÔNG TIN SAI PHẠM"
         Me.lblHeader.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'txtTenCongDan
+        'Guna2HtmlLabel1
         '
-        Me.txtTenCongDan.BorderColor = System.Drawing.Color.Black
-        Me.txtTenCongDan.BorderRadius = 5
-        Me.txtTenCongDan.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtTenCongDan.DefaultText = ""
-        Me.txtTenCongDan.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txtTenCongDan.Location = New System.Drawing.Point(400, 89)
-        Me.txtTenCongDan.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtTenCongDan.Name = "txtTenCongDan"
-        Me.txtTenCongDan.PlaceholderText = ""
-        Me.txtTenCongDan.SelectedText = ""
-        Me.txtTenCongDan.Size = New System.Drawing.Size(222, 45)
-        Me.txtTenCongDan.TabIndex = 1
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(29, 104)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(112, 25)
+        Me.Guna2HtmlLabel1.TabIndex = 2
+        Me.Guna2HtmlLabel1.Text = "Mã Sai Phạm:"
         '
-        'btnTK
+        'lblSoCCCD
         '
-        Me.btnTK.BorderRadius = 15
-        Me.btnTK.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnTK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnTK.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnTK.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.btnTK.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.btnTK.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.btnTK.ForeColor = System.Drawing.Color.White
-        Me.btnTK.Location = New System.Drawing.Point(661, 78)
-        Me.btnTK.Name = "btnTK"
-        Me.btnTK.Size = New System.Drawing.Size(168, 56)
-        Me.btnTK.TabIndex = 10
-        Me.btnTK.Text = "Tìm Kiếm"
+        Me.lblSoCCCD.BackColor = System.Drawing.Color.Transparent
+        Me.lblSoCCCD.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSoCCCD.Location = New System.Drawing.Point(29, 169)
+        Me.lblSoCCCD.Name = "lblSoCCCD"
+        Me.lblSoCCCD.Size = New System.Drawing.Size(79, 25)
+        Me.lblSoCCCD.TabIndex = 2
+        Me.lblSoCCCD.Text = "Số CCCD:"
         '
-        'xuatReport
+        'lblLoiSaiPham
         '
-        Me.xuatReport.BackColor = System.Drawing.Color.Transparent
-        Me.xuatReport.BorderRadius = 15
-        Me.xuatReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.xuatReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.xuatReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.xuatReport.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.xuatReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.xuatReport.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.xuatReport.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.xuatReport.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.xuatReport.ForeColor = System.Drawing.Color.White
-        Me.xuatReport.Location = New System.Drawing.Point(666, 169)
-        Me.xuatReport.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.xuatReport.Name = "xuatReport"
-        Me.xuatReport.Size = New System.Drawing.Size(163, 56)
-        Me.xuatReport.TabIndex = 13
-        Me.xuatReport.Text = "Xuất Báo Cáo"
+        Me.lblLoiSaiPham.BackColor = System.Drawing.Color.Transparent
+        Me.lblLoiSaiPham.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLoiSaiPham.Location = New System.Drawing.Point(29, 229)
+        Me.lblLoiSaiPham.Name = "lblLoiSaiPham"
+        Me.lblLoiSaiPham.Size = New System.Drawing.Size(109, 25)
+        Me.lblLoiSaiPham.TabIndex = 4
+        Me.lblLoiSaiPham.Text = "Lỗi sai phạm:"
         '
-        'Guna2HtmlLabel2
+        'lblNgaySai
         '
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(256, 104)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(121, 25)
-        Me.Guna2HtmlLabel2.TabIndex = 14
-        Me.Guna2HtmlLabel2.Text = "Tên Công Dân:"
+        Me.lblNgaySai.BackColor = System.Drawing.Color.Transparent
+        Me.lblNgaySai.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNgaySai.Location = New System.Drawing.Point(29, 289)
+        Me.lblNgaySai.Name = "lblNgaySai"
+        Me.lblNgaySai.Size = New System.Drawing.Size(127, 25)
+        Me.lblNgaySai.TabIndex = 6
+        Me.lblNgaySai.Text = "Ngày sai phạm:"
+        '
+        'lblNoiSaiPham
+        '
+        Me.lblNoiSaiPham.BackColor = System.Drawing.Color.Transparent
+        Me.lblNoiSaiPham.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNoiSaiPham.Location = New System.Drawing.Point(29, 349)
+        Me.lblNoiSaiPham.Name = "lblNoiSaiPham"
+        Me.lblNoiSaiPham.Size = New System.Drawing.Size(114, 25)
+        Me.lblNoiSaiPham.TabIndex = 8
+        Me.lblNoiSaiPham.Text = "Nơi sai phạm:"
+        '
+        'lblMucPhat
+        '
+        Me.lblMucPhat.BackColor = System.Drawing.Color.Transparent
+        Me.lblMucPhat.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMucPhat.Location = New System.Drawing.Point(29, 409)
+        Me.lblMucPhat.Name = "lblMucPhat"
+        Me.lblMucPhat.Size = New System.Drawing.Size(85, 25)
+        Me.lblMucPhat.TabIndex = 10
+        Me.lblMucPhat.Text = "Mức phạt:"
+        '
+        'lblTrangThai
+        '
+        Me.lblTrangThai.BackColor = System.Drawing.Color.Transparent
+        Me.lblTrangThai.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTrangThai.Location = New System.Drawing.Point(29, 469)
+        Me.lblTrangThai.Name = "lblTrangThai"
+        Me.lblTrangThai.Size = New System.Drawing.Size(91, 25)
+        Me.lblTrangThai.TabIndex = 12
+        Me.lblTrangThai.Text = "Trạng thái:"
         '
         'ViPham
         '
         Me.BackColor = System.Drawing.SystemColors.AppWorkspace
-        Me.ClientSize = New System.Drawing.Size(1351, 740)
+        Me.ClientSize = New System.Drawing.Size(1485, 740)
         Me.Controls.Add(Me.Guna2CustomGradientPanel1)
         Me.Controls.Add(Me.pnlInput)
         Me.Controls.Add(Me.pnlSearch)
