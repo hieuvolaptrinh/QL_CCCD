@@ -130,7 +130,6 @@ D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Qua
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\ReportTest.rdlc
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.BaoCaoNguoiDung_ViPham.resources
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.vbproj.AssemblyReference.cache
-D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.BaoCaoCongDan.resources
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.BaoCaoNguoiDung_ViPham.resources
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.HoSoLienQuan.resources
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.Resources.resources
@@ -173,3 +172,5 @@ D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\N�
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\stdole.dll
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.vbproj.Up2Date
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.ViPham.resources
+D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\ReportSaiPham.rdlc
+D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.FormReportViPham.resources

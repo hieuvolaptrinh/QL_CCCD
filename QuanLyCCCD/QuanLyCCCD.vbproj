@@ -111,12 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="BaoCaoCongDan.Designer.vb">
-      <DependentUpon>BaoCaoCongDan.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BaoCaoCongDan.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="BaoCaoNguoiDung_ViPham.Designer.vb">
       <DependentUpon>BaoCaoNguoiDung_ViPham.vb</DependentUpon>
     </Compile>
@@ -126,6 +120,12 @@
     <Compile Include="Class\CongDanCCCD.vb" />
     <Compile Include="Class\CongDan_SaiPham.vb" />
     <Compile Include="Class\GiayToLienQuan.vb" />
+    <Compile Include="FormReportViPham.Designer.vb">
+      <DependentUpon>FormReportViPham.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportViPham.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SQL\DatabaseConnection.vb" />
     <Compile Include="SQL\CongDanCCCDDAO.vb" />
     <Compile Include="SQL\GiayToDAO.vb" />
@@ -174,11 +174,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BaoCaoCongDan.resx">
-      <DependentUpon>BaoCaoCongDan.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BaoCaoNguoiDung_ViPham.resx">
       <DependentUpon>BaoCaoNguoiDung_ViPham.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportViPham.resx">
+      <DependentUpon>FormReportViPham.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HoSoLienQuan.resx">
       <DependentUpon>HoSoLienQuan.vb</DependentUpon>
@@ -191,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLy.resx">
       <DependentUpon>QuanLy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportSaiPham.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportDSCCCD.rdlc" />
     <EmbeddedResource Include="ReportTest.rdlc">

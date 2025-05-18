@@ -23,6 +23,7 @@ Partial Class QuanLy
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.pnlVeDat = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.lblVeDatValue = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -57,14 +58,13 @@ Partial Class QuanLy
         Me.que = New Guna.UI2.WinForms.Guna2TextBox()
         Me.ten = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DataGridViewCCCD = New System.Windows.Forms.DataGridView()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Guna2CustomGradientPanel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlVeDat.SuspendLayout()
         Me.pnlVeHuy.SuspendLayout()
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridViewCCCD, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2CustomGradientPanel1
@@ -83,6 +83,18 @@ Partial Class QuanLy
         Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(1422, 141)
         Me.Guna2CustomGradientPanel1.TabIndex = 9
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.QuanLyCCCD.My.Resources.Resources.policeman
+        Me.PictureBox2.Location = New System.Drawing.Point(33, 63)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(109, 57)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 16
+        Me.PictureBox2.TabStop = False
         '
         'pnlVeDat
         '
@@ -168,7 +180,7 @@ Partial Class QuanLy
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Label1.Location = New System.Drawing.Point(20, 15)
+        Me.Label1.Location = New System.Drawing.Point(176, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(366, 92)
         Me.Label1.TabIndex = 7
@@ -638,18 +650,6 @@ Partial Class QuanLy
         Me.DataGridViewCCCD.Size = New System.Drawing.Size(1373, 381)
         Me.DataGridViewCCCD.TabIndex = 0
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.Image = Global.QuanLyCCCD.My.Resources.Resources.policeman
-        Me.PictureBox2.Location = New System.Drawing.Point(11, 11)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(109, 57)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 16
-        Me.PictureBox2.TabStop = False
-        '
         'QuanLy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -661,6 +661,7 @@ Partial Class QuanLy
         Me.Text = "Quản Lý - 9 Võ Nguyễn Đại Hiếu"
         Me.Guna2CustomGradientPanel1.ResumeLayout(False)
         Me.Guna2CustomGradientPanel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlVeDat.ResumeLayout(False)
         Me.pnlVeDat.PerformLayout()
         Me.pnlVeHuy.ResumeLayout(False)
@@ -669,7 +670,6 @@ Partial Class QuanLy
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridViewCCCD, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
