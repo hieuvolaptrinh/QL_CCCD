@@ -64,7 +64,7 @@ Public Class ViPham
             .Columns("NgaySai").HeaderText = "Ngày Vi Phạm"
             .Columns("NoiSaiPham").HeaderText = "Địa Điểm Vi Phạm"
             .Columns("MucPhat").HeaderText = "Mức Phạt (VNĐ)"
-            .Columns("TrangThai").HeaderText = "Trạng Thái XL"
+            .Columns("TrangThai").HeaderText = "Trạng Thái"
 
 
             .Columns("NgaySai").DefaultCellStyle.Format = "dd/MM/yyyy"
@@ -166,6 +166,16 @@ Public Class ViPham
     End Sub
 
     Private Sub xuatReport_Click(sender As Object, e As EventArgs) Handles xuatReport.Click
-
+        Try
+            If dsSaiPham IsNot Nothing AndAlso dsSaiPham.Count > 0 Then
+                'Tạo và hiển thị form report
+                Dim frmReport As New FormReportViPham(dsSaiPham)
+                frmReport.ShowDialog()
+            Else
+                MessageBox.Show("Không có dữ liệu để xuất báo cáo!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Lỗi khi xuất báo cáo: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 End Class

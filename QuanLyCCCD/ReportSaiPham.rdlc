@@ -6,28 +6,28 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.17192cm</Width>
+              <Width>1.95123cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.29375cm</Width>
+              <Width>3.46573cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.97625cm</Width>
+              <Width>3.14823cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.66183cm</Width>
+              <Width>3.83381cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.97625cm</Width>
+              <Width>3.14823cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.97625cm</Width>
+              <Width>3.14823cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.75942cm</Width>
+              <Width>3.9314cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.94992cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -260,14 +260,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox16">
+                    <Textbox Name="Textbox8">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Trạng thái</Value>
+                              <Value>Trang Thai</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -276,7 +276,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -304,7 +304,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>==RowNumber(nothing)</Value>
+                              <Value>=RowNumber(nothing)</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -432,7 +432,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MucPhat.Value</Value>
+                              <Value>=Format(Fields!MucPhat.Value, "N0") &amp; " VNĐ"</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -464,7 +464,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!NgaySai.Value</Value>
+                              <Value>=Format(Fields!NgaySai.Value, "dd/MM/yyyy")</Value>
                               <Style>
                                 <FontSize>12pt</FontSize>
                               </Style>
@@ -521,7 +521,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TrangThai1">
+                    <Textbox Name="TrangThai2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -537,7 +537,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TrangThai1</rd:DefaultName>
+                      <rd:DefaultName>TrangThai2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -581,7 +581,7 @@
         <Top>0.69003cm</Top>
         <Left>0.94403cm</Left>
         <Height>1.2cm</Height>
-        <Width>25.76558cm</Width>
+        <Width>25.12685cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -589,11 +589,43 @@
           <FontSize>12pt</FontSize>
         </Style>
       </Tablix>
+      <Textbox Name="TrangThai">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="Tổng tiền phạt là: " &amp; Format(Sum(Fields!MucPhat.Value, "DataSet1"), "N0") &amp; " VNĐ"</Value>
+                <Style>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>TrangThai</rd:DefaultName>
+        <Top>3.6957cm</Top>
+        <Left>15.51962cm</Left>
+        <Height>0.93867cm</Height>
+        <Width>11.57117cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>1in</Height>
+    <Height>2.20833in</Height>
     <Style />
   </Body>
-  <Width>11.81235in</Width>
+  <Width>11.88692in</Width>
   <Page>
     <PageHeader>
       <Height>5.4387cm</Height>
@@ -792,42 +824,9 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>5.715cm</Height>
+      <Height>0.02646cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Textbox Name="TrangThai">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value EvaluationMode="Constant">Tổng tiền phạt là:=Sum(Fields!MucPhat.Value)</Value>
-                  <Style>
-                    <FontSize>15pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>TrangThai</rd:DefaultName>
-          <Top>1.81187cm</Top>
-          <Left>14.74578cm</Left>
-          <Height>0.93867cm</Height>
-          <Width>11.57117cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-      </ReportItems>
       <Style>
         <Border>
           <Style>None</Style>

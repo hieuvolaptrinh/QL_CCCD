@@ -111,12 +111,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="BaoCaoNguoiDung_ViPham.Designer.vb">
-      <DependentUpon>BaoCaoNguoiDung_ViPham.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BaoCaoNguoiDung_ViPham.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Class\CongDanCCCD.vb" />
     <Compile Include="Class\CongDan_SaiPham.vb" />
     <Compile Include="Class\GiayToLienQuan.vb" />
@@ -160,12 +154,6 @@
     <Compile Include="TichHopGiayTo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrangChu-Admin.Designer.vb">
-      <DependentUpon>TrangChu-Admin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="TrangChu-Admin.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="ViPham.Designer.vb">
       <DependentUpon>ViPham.vb</DependentUpon>
     </Compile>
@@ -174,9 +162,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BaoCaoNguoiDung_ViPham.resx">
-      <DependentUpon>BaoCaoNguoiDung_ViPham.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormReportViPham.resx">
       <DependentUpon>FormReportViPham.vb</DependentUpon>
     </EmbeddedResource>
@@ -201,9 +186,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TichHopGiayTo.resx">
       <DependentUpon>TichHopGiayTo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TrangChu-Admin.resx">
-      <DependentUpon>TrangChu-Admin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViPham.resx">
       <DependentUpon>ViPham.vb</DependentUpon>

@@ -51,17 +51,33 @@ Public Class ViPhamDao
         Dim dsSaiPham As New List(Of CongDan_SaiPham)
         Try
             conn.Open()
-            Dim sql As String = "SELECT sp.maSaiPham, sp.soCCCD, sp.loiSaiPham, sp.ngaySai, " & _
-                               "sp.noiSaiPham, sp.mucPhat, sp.trangThai, " & _
-                               "cd.hoTen " & _
-                               "FROM SaiPham sp " & _
-                               "INNER JOIN CongDanCCCD cd ON sp.soCCCD = cd.soCCCD " & _
-                               "WHERE (@tenNguoiDung = '' OR cd.hoTen LIKE '%' + @tenNguoiDung + '%') " & _
-                               "AND (@trangThai = 'Tất cả trạng thái' OR sp.trangThai = @trangThai)"
+            Dim sql As String = "SELECT sp.maSaiPham, sp.soCCCD, sp.loiSaiPham, sp.ngaySai, " &
+                               "sp.noiSaiPham, sp.mucPhat, sp.trangThai, " &
+                               "cd.hoTen " &
+                               "FROM SaiPham sp " &
+                               "INNER JOIN CongDanCCCD cd ON sp.soCCCD = cd.soCCCD " &
+                               "WHERE 1=1 "
+
+            ' Thêm điều kiện tìm kiếm theo tên nếu có
+            If Not String.IsNullOrWhiteSpace(tenNguoiDung) Then
+                sql &= "AND cd.hoTen LIKE @tenNguoiDung "
+            End If
+
+            ' Thêm điều kiện tìm kiếm theo trạng thái nếu không phải "Tất cả trạng thái"
+            If trangThai <> "Tất cả trạng thái" Then
+                sql &= "AND sp.trangThai = @trangThai "
+            End If
 
             Using cmd As New SqlCommand(sql, conn)
-                cmd.Parameters.AddWithValue("@tenNguoiDung", If(String.IsNullOrEmpty(tenNguoiDung), "", tenNguoiDung))
-                cmd.Parameters.AddWithValue("@trangThai", trangThai)
+                ' Thêm parameter cho tên người dùng nếu có
+                If Not String.IsNullOrWhiteSpace(tenNguoiDung) Then
+                    cmd.Parameters.AddWithValue("@tenNguoiDung", "%" & tenNguoiDung & "%")
+                End If
+
+                ' Thêm parameter cho trạng thái nếu không phải "Tất cả trạng thái"
+                If trangThai <> "Tất cả trạng thái" Then
+                    cmd.Parameters.AddWithValue("@trangThai", trangThai)
+                End If
 
                 Using reader As SqlDataReader = cmd.ExecuteReader()
                     While reader.Read()
