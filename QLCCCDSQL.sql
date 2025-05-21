@@ -16,59 +16,71 @@ GO
 USE QuanLyCCCD;
 GO
 
--- Tạo bảng CongDanCCCD (gộp CongDan và CCCD)
+
 CREATE TABLE CongDanCCCD (
-    soCCCD VARCHAR(12) PRIMARY KEY,
+    soCCCD CHAR(12) PRIMARY KEY,
     hoTen NVARCHAR(100) NOT NULL,
     ngaySinh DATE NOT NULL,
-    gioiTinh NVARCHAR(10) CHECK (GioiTinh IN (N'Nam', N'Nữ')),
+    gioiTinh NVARCHAR(3),
     queQuan NVARCHAR(50),
     noiO NVARCHAR(50),
     ngayCap DATE NOT NULL,
     noiCap NVARCHAR(100) NOT NULL,
-
 );
 GO
-
--- Tạo bảng GiayToLienQuan với cột ChiTiet mới
-CREATE TABLE GiayToLienQuan (
-    soGiayTo NVARCHAR(50) PRIMARY KEY,
-    soCCCD VARCHAR(12) NOT NULL,
-    loaiGiayTo NVARCHAR(50) NOT NULL,
-    ngayCap DATE NOT NULL,
-    noiCap NVARCHAR(100) NOT NULL,
-    ngayHetHan DATE,
-    chiTiet NVARCHAR(200), -- Cột mới để lưu thông tin bổ sung
-    CHECK (NgayHetHan IS NULL OR NgayHetHan > NgayCap),
-    FOREIGN KEY (SoCCCD) REFERENCES CongDanCCCD(SoCCCD) ON DELETE CASCADE ON UPDATE CASCADE
-);
+ALTER TABLE CongDanCCCD
+	ADD CONSTRAINT CK_CongDanDCCCD_ngaySinh CHECK (ngaySinh <= CAST(DATEADD(YEAR, -14 , GETDATE()) AS DATE) 
+		AND ngaySinh <ngayCap), -- trên 14 tuổi mới cấp cccd và ngày sinh bé hơn ngày cấp
+		CONSTRAINT CK_CongDanDCCCD_ngayCap CHECK (ngayCap <= CAST(GETDATE() AS DATE)),-- ngày cấp <= ngày hiện tại
+		CONSTRAINT CK_CongDanDCCCD_gioiTinh CHECK (gioiTinh IN (N'Nam',N'Nữ')) -- giới tính chỉ có nam và nữ
 GO
-
 CREATE TABLE SaiPham (
-    maSaiPham CHAR(10) PRIMARY KEY,
-    SoCCCD VARCHAR(12) NOT NULL,
+    maSaiPham VARCHAR(10) PRIMARY KEY,
+    soCCCD CHAR(12) NOT NULL,
     loiSaiPham NVARCHAR(200) NOT NULL,
     ngaySai DATE NOT NULL,
     noiSaiPham NVARCHAR(100),
     mucPhat MONEY,
-    trangThai NVARCHAR(50) ,
+    trangThai NVARCHAR(50) default N'Chưa xử lý',
     FOREIGN KEY (SoCCCD) REFERENCES CongDanCCCD(SoCCCD) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
 GO
+ALTER TABLE SaiPham
+	ADD CONSTRAINT CK_SaiPham_mucPhat CHECK ( mucPhat >0), -- mức phạt > 0
+		CONSTRAINT CK_SaiPham_ngaySai CHECK (ngaySai<= CAST(GETDATE() AS DATE))-- ngày sai phạm <= ngày hiện tại
+		
+GO
+CREATE TABLE GiayToLienQuan (
+    soGiayTo VARCHAR(10) PRIMARY KEY,
+    soCCCD CHAR(12) NOT NULL,
+    loaiGiayTo NVARCHAR(50) NOT NULL,
+    ngayCap DATE NOT NULL,
+    noiCap NVARCHAR(100) NOT NULL,
+    ngayHetHan DATE,
+    chiTiet NVARCHAR(200), 
+    FOREIGN KEY (SoCCCD) REFERENCES CongDanCCCD(SoCCCD) ON DELETE CASCADE ON UPDATE CASCADE
+);
+GO
+ALTER TABLE GiayToLienQuan
+	ADD CONSTRAINT CK_GTLQ_NgayHetHan CHECK ( ngayHetHan > ngayCap), -- ngày hết hạn > ngày cấp
+		CONSTRAINT CK_GTLQ_NgayCap CHECK (ngayCap <= CAST(GETDATE() AS DATE));-- ngày cấp nhỏ hơn hoặc bằng ngày hiện tại
+GO
+
+
+
 -- Thêm dữ liệu mẫu vào bảng CongDanCCCD
-INSERT INTO CongDanCCCD (SoCCCD, HoTen, NgaySinh, GioiTinh, DanToc, TonGiao, QueQuan, NoiO, NgayCap, NoiCap)
+INSERT INTO CongDanCCCD (SoCCCD, HoTen, NgaySinh, GioiTinh, QueQuan, NoiO, NgayCap, NoiCap)
 VALUES 
-    ('123456789001', N'Nguyễn Văn An', '1990-01-15', N'Nam', N'Kinh', N'Không', N'Hà Nội', N'Hà Nội', '2020-01-01', N'Cục QLDC Hà Nội'),
-    ('123456789002', N'Trần Thị Bình', '1992-05-20', N'Nữ', N'Kinh', N'Phật giáo', N'TP.HCM', N'TP.HCM', '2021-02-10', N'Cục QLDC TP.HCM'),
-    ('123456789003', N'Phạm Quốc Cường', '1985-03-10', N'Nam', N'Kinh', N'Không', N'Đà Nẵng', N'Đà Nẵng', '2019-11-05', N'Cục QLDC Đà Nẵng'),
-    ('123456789004', N'Lê Thị Dung', '1995-07-12', N'Nữ', N'Kinh', N'Thiên chúa', N'Hà Nội', N'Hà Nội', '2020-07-01', N'Cục QLDC Hà Nội'),
-    ('123456789005', N'Hoàng Văn Em', '1988-08-08', N'Nam', N'Kinh', N'Không', N'TP.HCM', N'TP.HCM', '2021-01-01', N'Cục QLDC TP.HCM'),
-    ('123456789006', N'Võ Thị Hoa', '1993-12-25', N'Nữ', N'Kinh', N'Không', N'Cần Thơ', N'Cần Thơ', '2022-05-20', N'Cục QLDC Cần Thơ'),
-    ('123456789007', N'Đặng Văn Khoa', '1991-09-30', N'Nam', N'Kinh', N'Không', N'Hải Phòng', N'Hải Phòng', '2020-03-10', N'Cục QLDC Hải Phòng'),
-    ('123456789008', N'Ngô Thị Lan', '1987-06-15', N'Nữ', N'Kinh', N'Không', N'Nghệ An', N'Nghệ An', '2019-08-01', N'Cục QLDC Nghệ An'),
-    ('123456789009', N'Bùi Minh Long', '1990-04-01', N'Nam', N'Kinh', N'Không', N'Đồng Nai', N'Đồng Nai', '2021-09-25', N'Cục QLDC Đồng Nai'),
-    ('123456789010', N'Dương Thị Mai', '1994-11-11', N'Nữ', N'Kinh', N'Không', N'Bình Dương', N'Bình Dương', '2022-01-18', N'Cục QLDC Bình Dương');
+    ('123456789001', N'Nguyễn Văn An', '1990-01-15', N'Nam', N'Hà Nội', N'Hà Nội', '2020-01-01', N'Cục QLDC Hà Nội'),
+    ('123456789002', N'Trần Thị Bình', '1992-05-20', N'Nữ',  N'TP.HCM', N'TP.HCM', '2021-02-10', N'Cục QLDC TP.HCM'),
+    ('123456789003', N'Phạm Quốc Cường', '1985-03-10', N'Nam', N'Đà Nẵng', N'Đà Nẵng', '2019-11-05', N'Cục QLDC Đà Nẵng'),
+    ('123456789004', N'Lê Thị Dung', '1995-07-12', N'Nữ',  N'Hà Nội', N'Hà Nội', '2020-07-01', N'Cục QLDC Hà Nội'),
+    ('123456789005', N'Hoàng Văn Em', '1988-08-08', N'Nam', N'TP.HCM', N'TP.HCM', '2021-01-01', N'Cục QLDC TP.HCM'),
+    ('123456789006', N'Võ Thị Hoa', '1993-12-25', N'Nữ',  N'Cần Thơ', N'Cần Thơ', '2022-05-20', N'Cục QLDC Cần Thơ'),
+    ('123456789007', N'Đặng Văn Khoa', '1991-09-30', N'Nam', N'Hải Phòng', N'Hải Phòng', '2020-03-10', N'Cục QLDC Hải Phòng'),
+    ('123456789008', N'Ngô Thị Lan', '1987-06-15', N'Nữ', N'Nghệ An', N'Nghệ An', '2019-08-01', N'Cục QLDC Nghệ An'),
+    ('123456789009', N'Bùi Minh Long', '1990-04-01', N'Nam', N'Đồng Nai', N'Đồng Nai', '2021-09-25', N'Cục QLDC Đồng Nai'),
+    ('123456789010', N'Dương Thị Mai', '1994-11-11', N'Nữ', N'Bình Dương', N'Bình Dương', '2022-01-18', N'Cục QLDC Bình Dương');
 GO
 
   
@@ -108,6 +120,6 @@ VALUES
 GO
 
 
-select sp.*, cc.HoTen, cc.NgaySinh, cc.GioiTinh, cc.DanToc, cc.TonGiao  ,cc.QueQuan
+select sp.*, cc.HoTen, cc.NgaySinh, cc.GioiTinh, cc.QueQuan
 from SaiPham  sp
 join CongDanCCCD cc on sp.SoCCCD = cc.SoCCCD

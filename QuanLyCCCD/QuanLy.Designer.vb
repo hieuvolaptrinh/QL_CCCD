@@ -25,10 +25,10 @@ Partial Class QuanLy
         Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.pnlVeDat = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.lblVeDatValue = New System.Windows.Forms.Label()
+        Me.lbSoNguoiTichHop = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pnlVeHuy = New Guna.UI2.WinForms.Guna2ShadowPanel()
-        Me.lblVeHuyValue = New System.Windows.Forms.Label()
+        Me.lblSoNguoiVIPham = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Xoa = New System.Windows.Forms.Button()
@@ -37,13 +37,11 @@ Partial Class QuanLy
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtDiaChi = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.timKiem = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2GradientButton10 = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.ngcap = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.ngsinh = New Guna.UI2.WinForms.Guna2DateTimePicker()
-        Me.Guna2GradientButton9 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton8 = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.Guna2GradientButton6 = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.btnXoa = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.CapNhat = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.themCCCD = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -58,6 +56,21 @@ Partial Class QuanLy
         Me.que = New Guna.UI2.WinForms.Guna2TextBox()
         Me.ten = New Guna.UI2.WinForms.Guna2TextBox()
         Me.DataGridViewCCCD = New System.Windows.Forms.DataGridView()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.HệThốngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuảnLýToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuảnLýCôngDânToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TíchHợpGiấyTờToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BáoCáoViPhạmToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.XemThôngTinToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DanhSáchCCCDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DanhSáchSaiPhạmToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DanhSáchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InBáoCáoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InBảngSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InBảngGiáyTờLiênQuaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InGiấyTriệuTậpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TrợGiúpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2CustomGradientPanel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlVeDat.SuspendLayout()
@@ -65,6 +78,7 @@ Partial Class QuanLy
         Me.Guna2ShadowPanel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridViewCCCD, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2CustomGradientPanel1
@@ -78,7 +92,7 @@ Partial Class QuanLy
         Me.Guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(233, Byte), Integer))
         Me.Guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(126, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(1, -3)
+        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(2, 30)
         Me.Guna2CustomGradientPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(1422, 141)
@@ -99,7 +113,7 @@ Partial Class QuanLy
         'pnlVeDat
         '
         Me.pnlVeDat.BackColor = System.Drawing.Color.Transparent
-        Me.pnlVeDat.Controls.Add(Me.lblVeDatValue)
+        Me.pnlVeDat.Controls.Add(Me.lbSoNguoiTichHop)
         Me.pnlVeDat.Controls.Add(Me.Label5)
         Me.pnlVeDat.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.pnlVeDat.Location = New System.Drawing.Point(901, 15)
@@ -112,16 +126,16 @@ Partial Class QuanLy
         Me.pnlVeDat.Size = New System.Drawing.Size(244, 117)
         Me.pnlVeDat.TabIndex = 15
         '
-        'lblVeDatValue
+        'lbSoNguoiTichHop
         '
-        Me.lblVeDatValue.AutoSize = True
-        Me.lblVeDatValue.Font = New System.Drawing.Font("Segoe UI", 28.0!, System.Drawing.FontStyle.Bold)
-        Me.lblVeDatValue.ForeColor = System.Drawing.Color.White
-        Me.lblVeDatValue.Location = New System.Drawing.Point(32, 52)
-        Me.lblVeDatValue.Name = "lblVeDatValue"
-        Me.lblVeDatValue.Size = New System.Drawing.Size(54, 62)
-        Me.lblVeDatValue.TabIndex = 9
-        Me.lblVeDatValue.Text = "0"
+        Me.lbSoNguoiTichHop.AutoSize = True
+        Me.lbSoNguoiTichHop.Font = New System.Drawing.Font("Segoe UI", 28.0!, System.Drawing.FontStyle.Bold)
+        Me.lbSoNguoiTichHop.ForeColor = System.Drawing.Color.White
+        Me.lbSoNguoiTichHop.Location = New System.Drawing.Point(32, 52)
+        Me.lbSoNguoiTichHop.Name = "lbSoNguoiTichHop"
+        Me.lbSoNguoiTichHop.Size = New System.Drawing.Size(54, 62)
+        Me.lbSoNguoiTichHop.TabIndex = 9
+        Me.lbSoNguoiTichHop.Text = "0"
         '
         'Label5
         '
@@ -138,7 +152,7 @@ Partial Class QuanLy
         'pnlVeHuy
         '
         Me.pnlVeHuy.BackColor = System.Drawing.Color.Transparent
-        Me.pnlVeHuy.Controls.Add(Me.lblVeHuyValue)
+        Me.pnlVeHuy.Controls.Add(Me.lblSoNguoiVIPham)
         Me.pnlVeHuy.Controls.Add(Me.Label12)
         Me.pnlVeHuy.FillColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.pnlVeHuy.Location = New System.Drawing.Point(574, 11)
@@ -151,16 +165,16 @@ Partial Class QuanLy
         Me.pnlVeHuy.Size = New System.Drawing.Size(251, 117)
         Me.pnlVeHuy.TabIndex = 14
         '
-        'lblVeHuyValue
+        'lblSoNguoiVIPham
         '
-        Me.lblVeHuyValue.AutoSize = True
-        Me.lblVeHuyValue.Font = New System.Drawing.Font("Segoe UI", 28.0!, System.Drawing.FontStyle.Bold)
-        Me.lblVeHuyValue.ForeColor = System.Drawing.Color.White
-        Me.lblVeHuyValue.Location = New System.Drawing.Point(16, 52)
-        Me.lblVeHuyValue.Name = "lblVeHuyValue"
-        Me.lblVeHuyValue.Size = New System.Drawing.Size(81, 62)
-        Me.lblVeHuyValue.TabIndex = 9
-        Me.lblVeHuyValue.Text = "32"
+        Me.lblSoNguoiVIPham.AutoSize = True
+        Me.lblSoNguoiVIPham.Font = New System.Drawing.Font("Segoe UI", 28.0!, System.Drawing.FontStyle.Bold)
+        Me.lblSoNguoiVIPham.ForeColor = System.Drawing.Color.White
+        Me.lblSoNguoiVIPham.Location = New System.Drawing.Point(16, 52)
+        Me.lblSoNguoiVIPham.Name = "lblSoNguoiVIPham"
+        Me.lblSoNguoiVIPham.Size = New System.Drawing.Size(54, 62)
+        Me.lblSoNguoiVIPham.TabIndex = 9
+        Me.lblSoNguoiVIPham.Text = "0"
         '
         'Label12
         '
@@ -169,9 +183,9 @@ Partial Class QuanLy
         Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(20, 15)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(185, 28)
+        Me.Label12.Size = New System.Drawing.Size(169, 28)
         Me.Label12.TabIndex = 9
-        Me.Label12.Text = "Số Người Vi Phạm"
+        Me.Label12.Text = "Số Lượt Vi Phạm"
         '
         'Label1
         '
@@ -209,12 +223,12 @@ Partial Class QuanLy
         Me.Guna2ShadowPanel1.Controls.Add(Me.GroupBox1)
         Me.Guna2ShadowPanel1.Controls.Add(Me.DataGridViewCCCD)
         Me.Guna2ShadowPanel1.FillColor = System.Drawing.Color.White
-        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(1, 134)
+        Me.Guna2ShadowPanel1.Location = New System.Drawing.Point(1, 167)
         Me.Guna2ShadowPanel1.Name = "Guna2ShadowPanel1"
         Me.Guna2ShadowPanel1.Padding = New System.Windows.Forms.Padding(20)
         Me.Guna2ShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.Guna2ShadowPanel1.ShadowDepth = 3
-        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(1422, 757)
+        Me.Guna2ShadowPanel1.Size = New System.Drawing.Size(1422, 681)
         Me.Guna2ShadowPanel1.TabIndex = 11
         '
         'GroupBox1
@@ -223,13 +237,11 @@ Partial Class QuanLy
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtDiaChi)
         Me.GroupBox1.Controls.Add(Me.Guna2GradientButton1)
-        Me.GroupBox1.Controls.Add(Me.timKiem)
-        Me.GroupBox1.Controls.Add(Me.Guna2GradientButton10)
         Me.GroupBox1.Controls.Add(Me.ngcap)
         Me.GroupBox1.Controls.Add(Me.ngsinh)
-        Me.GroupBox1.Controls.Add(Me.Guna2GradientButton9)
-        Me.GroupBox1.Controls.Add(Me.Guna2GradientButton8)
-        Me.GroupBox1.Controls.Add(Me.Guna2GradientButton6)
+        Me.GroupBox1.Controls.Add(Me.btnXoa)
+        Me.GroupBox1.Controls.Add(Me.CapNhat)
+        Me.GroupBox1.Controls.Add(Me.themCCCD)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label6)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -245,7 +257,7 @@ Partial Class QuanLy
         Me.GroupBox1.Controls.Add(Me.ten)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 16.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.GroupBox1.Location = New System.Drawing.Point(27, 21)
+        Me.GroupBox1.Location = New System.Drawing.Point(26, 36)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -301,52 +313,12 @@ Partial Class QuanLy
         Me.Guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(108, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(125, Byte), Integer))
         Me.Guna2GradientButton1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.Guna2GradientButton1.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton1.Location = New System.Drawing.Point(930, 188)
+        Me.Guna2GradientButton1.Location = New System.Drawing.Point(1173, 278)
         Me.Guna2GradientButton1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Guna2GradientButton1.Name = "Guna2GradientButton1"
         Me.Guna2GradientButton1.Size = New System.Drawing.Size(167, 48)
         Me.Guna2GradientButton1.TabIndex = 26
         Me.Guna2GradientButton1.Text = "Refresh"
-        '
-        'timKiem
-        '
-        Me.timKiem.BackColor = System.Drawing.Color.Transparent
-        Me.timKiem.BorderRadius = 20
-        Me.timKiem.DisabledState.BorderColor = System.Drawing.Color.Black
-        Me.timKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.timKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.timKiem.DisabledState.ForeColor = System.Drawing.Color.Black
-        Me.timKiem.FillColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(162, Byte), Integer), CType(CType(184, Byte), Integer))
-        Me.timKiem.FocusedColor = System.Drawing.Color.Green
-        Me.timKiem.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.timKiem.ForeColor = System.Drawing.Color.White
-        Me.timKiem.Image = Global.QuanLyCCCD.My.Resources.Resources.find
-        Me.timKiem.Location = New System.Drawing.Point(1148, 190)
-        Me.timKiem.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.timKiem.Name = "timKiem"
-        Me.timKiem.Size = New System.Drawing.Size(179, 46)
-        Me.timKiem.TabIndex = 25
-        Me.timKiem.Text = "Tìm Kiếm"
-        '
-        'Guna2GradientButton10
-        '
-        Me.Guna2GradientButton10.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2GradientButton10.BorderRadius = 15
-        Me.Guna2GradientButton10.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton10.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton10.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton10.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2GradientButton10.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(123, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2GradientButton10.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2GradientButton10.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton10.Location = New System.Drawing.Point(379, 278)
-        Me.Guna2GradientButton10.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Guna2GradientButton10.Name = "Guna2GradientButton10"
-        Me.Guna2GradientButton10.Size = New System.Drawing.Size(163, 56)
-        Me.Guna2GradientButton10.TabIndex = 12
-        Me.Guna2GradientButton10.Text = "Xuất Danh Sách"
         '
         'ngcap
         '
@@ -376,59 +348,59 @@ Partial Class QuanLy
         Me.ngsinh.TabIndex = 11
         Me.ngsinh.Value = New Date(2025, 4, 25, 19, 2, 26, 946)
         '
-        'Guna2GradientButton9
+        'btnXoa
         '
-        Me.Guna2GradientButton9.BorderRadius = 10
-        Me.Guna2GradientButton9.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton9.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton9.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton9.FillColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Guna2GradientButton9.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Guna2GradientButton9.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2GradientButton9.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton9.Location = New System.Drawing.Point(202, 278)
-        Me.Guna2GradientButton9.Name = "Guna2GradientButton9"
-        Me.Guna2GradientButton9.Size = New System.Drawing.Size(164, 56)
-        Me.Guna2GradientButton9.TabIndex = 9
-        Me.Guna2GradientButton9.Text = "Xóa Thông Tin"
+        Me.btnXoa.BorderRadius = 10
+        Me.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnXoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnXoa.FillColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.btnXoa.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.btnXoa.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.btnXoa.ForeColor = System.Drawing.Color.White
+        Me.btnXoa.Location = New System.Drawing.Point(223, 270)
+        Me.btnXoa.Name = "btnXoa"
+        Me.btnXoa.Size = New System.Drawing.Size(164, 56)
+        Me.btnXoa.TabIndex = 9
+        Me.btnXoa.Text = "Xóa Thông Tin"
         '
-        'Guna2GradientButton8
+        'CapNhat
         '
-        Me.Guna2GradientButton8.BorderRadius = 10
-        Me.Guna2GradientButton8.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton8.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton8.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton8.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.Guna2GradientButton8.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.Guna2GradientButton8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2GradientButton8.ForeColor = System.Drawing.Color.Black
-        Me.Guna2GradientButton8.Location = New System.Drawing.Point(6, 278)
-        Me.Guna2GradientButton8.Name = "Guna2GradientButton8"
-        Me.Guna2GradientButton8.Size = New System.Drawing.Size(155, 56)
-        Me.Guna2GradientButton8.TabIndex = 9
-        Me.Guna2GradientButton8.Text = "Chỉnh Sửa"
+        Me.CapNhat.BorderRadius = 10
+        Me.CapNhat.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.CapNhat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.CapNhat.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.CapNhat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.CapNhat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.CapNhat.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.CapNhat.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(193, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.CapNhat.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.CapNhat.ForeColor = System.Drawing.Color.Black
+        Me.CapNhat.Location = New System.Drawing.Point(27, 270)
+        Me.CapNhat.Name = "CapNhat"
+        Me.CapNhat.Size = New System.Drawing.Size(155, 56)
+        Me.CapNhat.TabIndex = 9
+        Me.CapNhat.Text = "Chỉnh Sửa"
         '
-        'Guna2GradientButton6
+        'themCCCD
         '
-        Me.Guna2GradientButton6.BorderRadius = 15
-        Me.Guna2GradientButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2GradientButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton6.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2GradientButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2GradientButton6.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Guna2GradientButton6.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Guna2GradientButton6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        Me.Guna2GradientButton6.ForeColor = System.Drawing.Color.White
-        Me.Guna2GradientButton6.Location = New System.Drawing.Point(580, 278)
-        Me.Guna2GradientButton6.Name = "Guna2GradientButton6"
-        Me.Guna2GradientButton6.Size = New System.Drawing.Size(168, 56)
-        Me.Guna2GradientButton6.TabIndex = 9
-        Me.Guna2GradientButton6.Text = "Thêm Mới CCCD"
+        Me.themCCCD.BorderRadius = 15
+        Me.themCCCD.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.themCCCD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.themCCCD.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.themCCCD.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.themCCCD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.themCCCD.FillColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.themCCCD.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(167, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.themCCCD.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.themCCCD.ForeColor = System.Drawing.Color.White
+        Me.themCCCD.Location = New System.Drawing.Point(437, 270)
+        Me.themCCCD.Name = "themCCCD"
+        Me.themCCCD.Size = New System.Drawing.Size(168, 56)
+        Me.themCCCD.TabIndex = 9
+        Me.themCCCD.Text = "Thêm Mới CCCD"
         '
         'Label8
         '
@@ -643,22 +615,121 @@ Partial Class QuanLy
         'DataGridViewCCCD
         '
         Me.DataGridViewCCCD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewCCCD.Location = New System.Drawing.Point(27, 364)
+        Me.DataGridViewCCCD.Location = New System.Drawing.Point(33, 398)
         Me.DataGridViewCCCD.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DataGridViewCCCD.Name = "DataGridViewCCCD"
         Me.DataGridViewCCCD.RowHeadersWidth = 51
-        Me.DataGridViewCCCD.Size = New System.Drawing.Size(1373, 381)
+        Me.DataGridViewCCCD.Size = New System.Drawing.Size(1373, 246)
         Me.DataGridViewCCCD.TabIndex = 0
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HệThốngToolStripMenuItem, Me.QuảnLýToolStripMenuItem, Me.XemThôngTinToolStripMenuItem, Me.InBáoCáoToolStripMenuItem, Me.TrợGiúpToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1424, 39)
+        Me.MenuStrip1.TabIndex = 20
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'HệThốngToolStripMenuItem
+        '
+        Me.HệThốngToolStripMenuItem.Name = "HệThốngToolStripMenuItem"
+        Me.HệThốngToolStripMenuItem.Size = New System.Drawing.Size(123, 35)
+        Me.HệThốngToolStripMenuItem.Text = "Hệ thống"
+        '
+        'QuảnLýToolStripMenuItem
+        '
+        Me.QuảnLýToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuảnLýCôngDânToolStripMenuItem, Me.TíchHợpGiấyTờToolStripMenuItem, Me.BáoCáoViPhạmToolStripMenuItem})
+        Me.QuảnLýToolStripMenuItem.Name = "QuảnLýToolStripMenuItem"
+        Me.QuảnLýToolStripMenuItem.Size = New System.Drawing.Size(106, 35)
+        Me.QuảnLýToolStripMenuItem.Text = "Quản lý"
+        '
+        'QuảnLýCôngDânToolStripMenuItem
+        '
+        Me.QuảnLýCôngDânToolStripMenuItem.Name = "QuảnLýCôngDânToolStripMenuItem"
+        Me.QuảnLýCôngDânToolStripMenuItem.Size = New System.Drawing.Size(346, 36)
+        Me.QuảnLýCôngDânToolStripMenuItem.Text = "Quản lý công dân(chọn)"
+        '
+        'TíchHợpGiấyTờToolStripMenuItem
+        '
+        Me.TíchHợpGiấyTờToolStripMenuItem.Name = "TíchHợpGiấyTờToolStripMenuItem"
+        Me.TíchHợpGiấyTờToolStripMenuItem.Size = New System.Drawing.Size(346, 36)
+        Me.TíchHợpGiấyTờToolStripMenuItem.Text = "Quản lý giấy tờ"
+        '
+        'BáoCáoViPhạmToolStripMenuItem
+        '
+        Me.BáoCáoViPhạmToolStripMenuItem.Name = "BáoCáoViPhạmToolStripMenuItem"
+        Me.BáoCáoViPhạmToolStripMenuItem.Size = New System.Drawing.Size(346, 36)
+        Me.BáoCáoViPhạmToolStripMenuItem.Text = "Quản lý vi phạm"
+        '
+        'XemThôngTinToolStripMenuItem
+        '
+        Me.XemThôngTinToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DanhSáchCCCDToolStripMenuItem, Me.DanhSáchSaiPhạmToolStripMenuItem, Me.DanhSáchToolStripMenuItem})
+        Me.XemThôngTinToolStripMenuItem.Name = "XemThôngTinToolStripMenuItem"
+        Me.XemThôngTinToolStripMenuItem.Size = New System.Drawing.Size(178, 35)
+        Me.XemThôngTinToolStripMenuItem.Text = "Xem Thông tin"
+        '
+        'DanhSáchCCCDToolStripMenuItem
+        '
+        Me.DanhSáchCCCDToolStripMenuItem.Name = "DanhSáchCCCDToolStripMenuItem"
+        Me.DanhSáchCCCDToolStripMenuItem.Size = New System.Drawing.Size(307, 36)
+        Me.DanhSáchCCCDToolStripMenuItem.Text = "Danh sách CCCD"
+        '
+        'DanhSáchSaiPhạmToolStripMenuItem
+        '
+        Me.DanhSáchSaiPhạmToolStripMenuItem.Name = "DanhSáchSaiPhạmToolStripMenuItem"
+        Me.DanhSáchSaiPhạmToolStripMenuItem.Size = New System.Drawing.Size(307, 36)
+        Me.DanhSáchSaiPhạmToolStripMenuItem.Text = "Danh sách sai phạm"
+        '
+        'DanhSáchToolStripMenuItem
+        '
+        Me.DanhSáchToolStripMenuItem.Name = "DanhSáchToolStripMenuItem"
+        Me.DanhSáchToolStripMenuItem.Size = New System.Drawing.Size(307, 36)
+        Me.DanhSáchToolStripMenuItem.Text = "Danh sách giấy tờ "
+        '
+        'InBáoCáoToolStripMenuItem
+        '
+        Me.InBáoCáoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InBảngSToolStripMenuItem, Me.InBảngGiáyTờLiênQuaToolStripMenuItem, Me.InGiấyTriệuTậpToolStripMenuItem})
+        Me.InBáoCáoToolStripMenuItem.Name = "InBáoCáoToolStripMenuItem"
+        Me.InBáoCáoToolStripMenuItem.Size = New System.Drawing.Size(134, 35)
+        Me.InBáoCáoToolStripMenuItem.Text = "In báo cáo"
+        '
+        'InBảngSToolStripMenuItem
+        '
+        Me.InBảngSToolStripMenuItem.Name = "InBảngSToolStripMenuItem"
+        Me.InBảngSToolStripMenuItem.Size = New System.Drawing.Size(345, 36)
+        Me.InBảngSToolStripMenuItem.Text = "In bảng sai phạm"
+        '
+        'InBảngGiáyTờLiênQuaToolStripMenuItem
+        '
+        Me.InBảngGiáyTờLiênQuaToolStripMenuItem.Name = "InBảngGiáyTờLiênQuaToolStripMenuItem"
+        Me.InBảngGiáyTờLiênQuaToolStripMenuItem.Size = New System.Drawing.Size(345, 36)
+        Me.InBảngGiáyTờLiênQuaToolStripMenuItem.Text = "In bảng giáy tờ liên qua"
+        '
+        'InGiấyTriệuTậpToolStripMenuItem
+        '
+        Me.InGiấyTriệuTậpToolStripMenuItem.Name = "InGiấyTriệuTậpToolStripMenuItem"
+        Me.InGiấyTriệuTậpToolStripMenuItem.Size = New System.Drawing.Size(345, 36)
+        Me.InGiấyTriệuTậpToolStripMenuItem.Text = "In giấy triệu tập"
+        '
+        'TrợGiúpToolStripMenuItem
+        '
+        Me.TrợGiúpToolStripMenuItem.Name = "TrợGiúpToolStripMenuItem"
+        Me.TrợGiúpToolStripMenuItem.Size = New System.Drawing.Size(115, 35)
+        Me.TrợGiúpToolStripMenuItem.Text = "Trợ Giúp"
         '
         'QuanLy
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1424, 890)
+        Me.ClientSize = New System.Drawing.Size(1424, 822)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Guna2ShadowPanel1)
         Me.Controls.Add(Me.Guna2CustomGradientPanel1)
         Me.Name = "QuanLy"
-        Me.Text = "Quản Lý - 9 Võ Nguyễn Đại Hiếu"
+        Me.Text = "Võ Nguyễn Đại Hiếu - STT 9 - Nhóm 9"
         Me.Guna2CustomGradientPanel1.ResumeLayout(False)
         Me.Guna2CustomGradientPanel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -670,7 +741,10 @@ Partial Class QuanLy
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DataGridViewCCCD, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -679,9 +753,9 @@ Partial Class QuanLy
     Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents DataGridViewCCCD As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Guna2GradientButton9 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton8 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2GradientButton6 As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents btnXoa As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents CapNhat As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents themCCCD As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -697,17 +771,30 @@ Partial Class QuanLy
     Friend WithEvents ngsinh As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents ngcap As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label9 As Label
-    Friend WithEvents Guna2GradientButton10 As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents timKiem As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Xoa As Button
     Private WithEvents pnlVeHuy As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents lblVeHuyValue As Label
+    Friend WithEvents lblSoNguoiVIPham As Label
     Friend WithEvents Label12 As Label
     Private WithEvents pnlVeDat As Guna.UI2.WinForms.Guna2ShadowPanel
-    Friend WithEvents lblVeDatValue As Label
+    Friend WithEvents lbSoNguoiTichHop As Label
     Friend WithEvents Label5 As Label
     Private WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Label10 As Label
     Friend WithEvents txtDiaChi As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents HệThốngToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuảnLýToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuảnLýCôngDânToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TíchHợpGiấyTờToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BáoCáoViPhạmToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TrợGiúpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents XemThôngTinToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InBáoCáoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InBảngSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InBảngGiáyTờLiênQuaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DanhSáchCCCDToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DanhSáchSaiPhạmToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InGiấyTriệuTậpToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DanhSáchToolStripMenuItem As ToolStripMenuItem
 End Class

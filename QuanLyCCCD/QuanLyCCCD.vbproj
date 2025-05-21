@@ -120,6 +120,12 @@
     <Compile Include="FormReportViPham.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="QuanLyViPham.Designer.vb">
+      <DependentUpon>QuanLyViPham.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyViPham.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SQL\DatabaseConnection.vb" />
     <Compile Include="SQL\CongDanCCCDDAO.vb" />
     <Compile Include="SQL\GiayToDAO.vb" />
@@ -154,12 +160,6 @@
     <Compile Include="TichHopGiayTo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViPham.Designer.vb">
-      <DependentUpon>ViPham.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ViPham.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormReportViPham.resx">
@@ -177,18 +177,14 @@
     <EmbeddedResource Include="QuanLy.resx">
       <DependentUpon>QuanLy.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportSaiPham.rdlc">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <EmbeddedResource Include="QuanLyViPham.resx">
+      <DependentUpon>QuanLyViPham.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportDSCCCD.rdlc" />
-    <EmbeddedResource Include="ReportTest.rdlc">
+    <EmbeddedResource Include="ReportSaiPham.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="TichHopGiayTo.resx">
       <DependentUpon>TichHopGiayTo.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViPham.resx">
-      <DependentUpon>ViPham.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

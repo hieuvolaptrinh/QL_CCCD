@@ -30,17 +30,17 @@ Partial Class FormReportViPham
         Me.ReportViewer1.Location = New System.Drawing.Point(-2, 2)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(1403, 768)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1470, 904)
         Me.ReportViewer1.TabIndex = 1
         '
         'FormReportViPham
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1401, 769)
+        Me.ClientSize = New System.Drawing.Size(1467, 905)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "FormReportViPham"
-        Me.Text = "FormReportViPham"
+        Me.Text = "Võ Nguyễn Đại Hiếu - STT 9 - Nhóm 9"
         Me.ResumeLayout(False)
 
     End Sub

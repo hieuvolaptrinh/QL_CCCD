@@ -1,6 +1,15 @@
 ﻿Public Class QuanLy
     Private dao As New CongDanCCCDDao()
+    Private viPhamDao As New ViPhamDao
+    Private Sub QuanLy_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim danhSach As List(Of CongDanCCCD) = dao.LayDanhSachCongDan()
+        Dim dt As DataTable = ConvertToDataTable(danhSach)
+        DataGridViewCCCD.DataSource = dt
 
+        DataGridViewCCCD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCCCD.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        CapNhatThongKe()
+    End Sub
     Private Function ConvertToDataTable(danhSach As List(Of CongDanCCCD)) As DataTable
         Dim dt As New DataTable()
         dt.Columns.Add("Họ và Tên", GetType(String))
@@ -28,15 +37,88 @@
         Return dt
     End Function
 
-    Private Sub QuanLy_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim danhSach As List(Of CongDanCCCD) = dao.LayDanhSachCongDan()
-        Dim dt As DataTable = ConvertToDataTable(danhSach)
-        DataGridViewCCCD.DataSource = dt
-
-        DataGridViewCCCD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCCCD.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+    Private Sub CapNhatThongKe()
+        Try
+            Dim soNguoiTichHop As Integer = dao.DemSoLuongCongDan()
+            lbSoNguoiTichHop.Text = soNguoiTichHop.ToString("#,##0")
+            Dim soNguoiViPham As Integer = viPhamDao.soLuongViPham()
+            lblSoNguoiVIPham.Text = soNguoiViPham.ToString("#,##0")
+        Catch ex As Exception
+            MessageBox.Show("Có lỗi khi cập nhật thống kê: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
+    Private Sub themCCCD_Click(sender As Object, e As EventArgs) Handles themCCCD.Click
+        Try
+            If String.IsNullOrWhiteSpace(cccd.Text) OrElse String.IsNullOrWhiteSpace(ten.Text) OrElse String.IsNullOrWhiteSpace(txtNoiCap.Text) Then
+                MessageBox.Show("Vui lòng điền các thông tin bắt buộc (Số CCCD, Họ tên, Nơi cấp)!", "Thông Báo",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+            Dim soCCCD As String = cccd.Text.Trim()
+            If Not IsNumeric(soCCCD) OrElse soCCCD.Length <> 12 Then
+                MessageBox.Show("Số CCCD phải là 12 chữ số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                cccd.Focus()
+                Return
+            End If
+            Dim ngaySinh As Date = ngsinh.Value
+            Dim ngayCap As Date = ngcap.Value
+            Dim congDan As New CongDanCCCD() With {
+                .SoCCCD = soCCCD,
+                .HoTen = ten.Text.Trim(),
+                .NgaySinh = ngaySinh,
+                .GioiTinh = If(rdioNam.Checked, "Nam", "Nữ"),
+                .QueQuan = que.Text.Trim(),
+                .NoiO = txtDiaChi.Text.Trim(),
+                .NgayCap = ngayCap,
+                .NoiCap = txtNoiCap.Text.Trim()
+            }
+
+            dao.ThemCongDan(congDan)
+            Dim danhSach As List(Of CongDanCCCD) = dao.LayDanhSachCongDan()
+            DataGridViewCCCD.DataSource = ConvertToDataTable(danhSach)
+            Guna2GradientButton1_Click(sender, e)
+        Catch ex As Exception
+            MessageBox.Show("Có lỗi xảy ra khi thêm công dân: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        CapNhatThongKe()
+    End Sub
+    Private Sub CapNhat_Click(sender As Object, e As EventArgs) Handles CapNhat.Click
+        Try
+            Dim soCCCD As String = cccd.Text.Trim()
+            Dim selectedRow As DataGridViewRow = DataGridViewCCCD.SelectedRows(0)
+            Dim originalCCCD As String = selectedRow.Cells("Số CCCD").Value.ToString()
+            Dim ngaySinh As Date = ngsinh.Value
+            Dim ngayCap As Date = ngcap.Value
+            Dim congDan As New CongDanCCCD() With {
+                .SoCCCD = soCCCD,
+                .HoTen = ten.Text.Trim(),
+                .NgaySinh = ngaySinh,
+                .GioiTinh = If(rdioNam.Checked, "Nam", "Nữ"),
+                .QueQuan = que.Text.Trim(),
+                .NoiO = txtDiaChi.Text.Trim(),
+                .NgayCap = ngayCap,
+                .NoiCap = txtNoiCap.Text.Trim()
+            }
+
+            Dim result As DialogResult = MessageBox.Show("Bạn có chắc chắn muốn cập nhật thông tin công dân này?",
+                                                        "Xác nhận cập nhật",
+                                                        MessageBoxButtons.YesNo,
+                                                        MessageBoxIcon.Question)
+            If result = DialogResult.Yes Then
+                dao.SuaCongDan(congDan)
+
+                Dim danhSach As List(Of CongDanCCCD) = dao.LayDanhSachCongDan()
+                DataGridViewCCCD.DataSource = ConvertToDataTable(danhSach)
+
+                Guna2GradientButton1_Click(sender, e)
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("Có lỗi xảy ra khi cập nhật thông tin công dân: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        CapNhatThongKe()
+    End Sub
     Private Sub DataGridViewCCCD_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewCCCD.CellContentClick
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = DataGridViewCCCD.Rows(e.RowIndex)
@@ -69,174 +151,15 @@
             End If
         End If
     End Sub
-
-    Private Sub Guna2GradientButton6_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton6.Click
+    Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoa.Click
         Try
-            ' Validate required fields
-            If String.IsNullOrWhiteSpace(cccd.Text) OrElse String.IsNullOrWhiteSpace(ten.Text) OrElse String.IsNullOrWhiteSpace(txtNoiCap.Text) Then
-                MessageBox.Show("Vui lòng điền các thông tin bắt buộc (Số CCCD, Họ tên, Nơi cấp)!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Return
-            End If
-
-            ' Validate CCCD format
-            Dim soCCCD As String = cccd.Text.Trim()
-            If Not IsNumeric(soCCCD) OrElse soCCCD.Length <> 12 Then
-                MessageBox.Show("Số CCCD phải là 12 chữ số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                cccd.Focus()
-                Return
-            End If
-
-            ' Check if CCCD already exists
-            Dim existingCongDan = dao.LayThongTinCongDan(soCCCD)
-            If existingCongDan IsNot Nothing Then
-                MessageBox.Show("Số CCCD đã tồn tại trong hệ thống!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                cccd.Focus()
-                Return
-            End If
-
-            ' Validate dates
-            Dim ngaySinh As Date = ngsinh.Value
-            Dim ngayCap As Date = ngcap.Value
-
-            If ngayCap <= ngaySinh Then
-                MessageBox.Show("Ngày cấp phải lớn hơn ngày sinh!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                ngcap.Focus()
-                Return
-            End If
-
-            If ngayCap > DateTime.Now Then
-                MessageBox.Show("Ngày cấp không thể lớn hơn ngày hiện tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                ngcap.Focus()
-                Return
-            End If
-
-            ' Create new CongDanCCCD object
-            Dim congDan As New CongDanCCCD() With {
-                .SoCCCD = soCCCD,
-                .HoTen = ten.Text.Trim(),
-                .NgaySinh = ngaySinh,
-                .GioiTinh = If(rdioNam.Checked, "Nam", "Nữ"),
-                .QueQuan = que.Text.Trim(),
-                .NoiO = txtDiaChi.Text.Trim(),
-                .NgayCap = ngayCap,
-                .NoiCap = txtNoiCap.Text.Trim()
-            }
-
-            ' Add to database
-            dao.ThemCongDan(congDan)
-
-            ' Refresh DataGridView
-            Dim danhSach As List(Of CongDanCCCD) = dao.LayDanhSachCongDan()
-            DataGridViewCCCD.DataSource = ConvertToDataTable(danhSach)
-
-            ' Clear form after successful addition
-            Guna2GradientButton1_Click(sender, e)
-
-        Catch ex As Exception
-            MessageBox.Show("Có lỗi xảy ra khi thêm công dân: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Guna2GradientButton8_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton8.Click
-        Try
-            ' Check if a row is selected
-            If DataGridViewCCCD.SelectedRows.Count = 0 Then
-                MessageBox.Show("Vui lòng chọn một công dân để sửa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Return
-            End If
-
-            ' Validate required fields
-            If String.IsNullOrWhiteSpace(cccd.Text) OrElse String.IsNullOrWhiteSpace(ten.Text) OrElse String.IsNullOrWhiteSpace(txtNoiCap.Text) Then
-                MessageBox.Show("Vui lòng điền các thông tin bắt buộc (Số CCCD, Họ tên, Nơi cấp)!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Return
-            End If
-
-            ' Validate CCCD format
-            Dim soCCCD As String = cccd.Text.Trim()
-            If Not IsNumeric(soCCCD) OrElse soCCCD.Length <> 12 Then
-                MessageBox.Show("Số CCCD phải là 12 chữ số!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                cccd.Focus()
-                Return
-            End If
-
-            ' Get original CCCD from selected row
-            Dim selectedRow As DataGridViewRow = DataGridViewCCCD.SelectedRows(0)
-            Dim originalCCCD As String = selectedRow.Cells("Số CCCD").Value.ToString()
-
-            ' If CCCD is changed, check if new CCCD already exists
-            If soCCCD <> originalCCCD Then
-                Dim existingCongDan = dao.LayThongTinCongDan(soCCCD)
-                If existingCongDan IsNot Nothing Then
-                    MessageBox.Show("Số CCCD mới đã tồn tại trong hệ thống!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    cccd.Focus()
-                    Return
-                End If
-            End If
-
-            ' Validate dates
-            Dim ngaySinh As Date = ngsinh.Value
-            Dim ngayCap As Date = ngcap.Value
-
-            If ngayCap <= ngaySinh Then
-                MessageBox.Show("Ngày cấp phải lớn hơn ngày sinh!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                ngcap.Focus()
-                Return
-            End If
-
-            If ngayCap > DateTime.Now Then
-                MessageBox.Show("Ngày cấp không thể lớn hơn ngày hiện tại!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                ngcap.Focus()
-                Return
-            End If
-
-            ' Create CongDanCCCD object with updated information
-            Dim congDan As New CongDanCCCD() With {
-                .SoCCCD = soCCCD,
-                .HoTen = ten.Text.Trim(),
-                .NgaySinh = ngaySinh,
-                .GioiTinh = If(rdioNam.Checked, "Nam", "Nữ"),
-                .QueQuan = que.Text.Trim(),
-                .NoiO = txtDiaChi.Text.Trim(),
-                .NgayCap = ngayCap,
-                .NoiCap = txtNoiCap.Text.Trim()
-            }
-
-            ' Confirm update
-            Dim result As DialogResult = MessageBox.Show("Bạn có chắc chắn muốn cập nhật thông tin công dân này?",
-                                                        "Xác nhận cập nhật",
-                                                        MessageBoxButtons.YesNo,
-                                                        MessageBoxIcon.Question)
-            If result = DialogResult.Yes Then
-                ' Update in database
-                dao.SuaCongDan(congDan)
-
-                ' Refresh DataGridView
-                Dim danhSach As List(Of CongDanCCCD) = dao.LayDanhSachCongDan()
-                DataGridViewCCCD.DataSource = ConvertToDataTable(danhSach)
-
-                ' Clear form after successful update
-                Guna2GradientButton1_Click(sender, e)
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show("Có lỗi xảy ra khi cập nhật thông tin công dân: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    Private Sub Guna2GradientButton9_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton9.Click
-        Try
-            ' Check if a row is selected
             If DataGridViewCCCD.SelectedRows.Count = 0 Then
                 MessageBox.Show("Vui lòng chọn một công dân để xóa!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
-
-            ' Get selected citizen information
             Dim selectedRow As DataGridViewRow = DataGridViewCCCD.SelectedRows(0)
             Dim soCCCD As String = selectedRow.Cells("Số CCCD").Value.ToString()
             Dim hoTen As String = selectedRow.Cells("Họ và Tên").Value.ToString()
-
-            ' Confirm deletion with more detailed message
             Dim result As DialogResult = MessageBox.Show(
                 $"Bạn có chắc chắn muốn xóa công dân:" & vbCrLf &
                 $"Họ tên: {hoTen}" & vbCrLf &
@@ -245,40 +168,22 @@
                 "Xác Nhận Xóa",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning)
-
             If result = DialogResult.Yes Then
-                ' Delete from database
-                dao.XoaCongDan(soCCCD)
 
-                ' Refresh DataGridView
+                dao.XoaCongDan(soCCCD)
                 Dim danhSach As List(Of CongDanCCCD) = dao.LayDanhSachCongDan()
                 DataGridViewCCCD.DataSource = ConvertToDataTable(danhSach)
-
-                ' Clear form after successful deletion
                 Guna2GradientButton1_Click(sender, e)
             End If
-
         Catch ex As Exception
             MessageBox.Show("Có lỗi xảy ra khi xóa công dân: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+        CapNhatThongKe()
     End Sub
 
-    Private Sub timKiem_Click(sender As Object, e As EventArgs) Handles timKiem.Click
-        Dim soCCCD As String = cccd.Text.Trim()
-        Dim hoTen As String = ten.Text.Trim()
-        Dim queQuan As String = que.Text.Trim()
-        Dim noiO As String = txtDiaChi.Text.Trim()
-        Dim noiCap As String = txtNoiCap.Text.Trim()
-        Dim gioiTinh As String = ""
-        If rdioNam.Checked Then gioiTinh = "Nam"
-        If rdioNu.Checked Then gioiTinh = "Nữ"
 
-        Dim danhSach As List(Of CongDanCCCD) = dao.TimKiemCongDan(soCCCD, hoTen, queQuan, noiO, noiCap, gioiTinh)
-        DataGridViewCCCD.DataSource = ConvertToDataTable(danhSach)
-    End Sub
-
+    'refresh
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
-        ' Xóa nội dung các TextBox
         ten.Clear()
         cccd.Clear()
         que.Clear()
@@ -289,10 +194,17 @@
 
         rdioNam.Checked = True
         rdioNu.Checked = False
-
         ten.Focus()
-
         Dim danhSach As List(Of CongDanCCCD) = dao.LayDanhSachCongDan()
         DataGridViewCCCD.DataSource = ConvertToDataTable(danhSach)
     End Sub
+
+
+
+    Private Sub BáoCáoViPhạmToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BáoCáoViPhạmToolStripMenuItem.Click
+        Dim frm As New QuanLyViPham()
+        frm.Show()
+        Me.Hide()
+    End Sub
+
 End Class

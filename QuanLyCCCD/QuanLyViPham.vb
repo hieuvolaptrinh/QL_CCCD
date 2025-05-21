@@ -1,47 +1,48 @@
-﻿Imports System.Data.SqlClient
+﻿Public Class QuanLyViPham
 
-Public Class ViPham
+    Private congDanDAO As CongDanCCCDDao
+
     Private viPhamDAO As ViPhamDao
     Private dsSaiPham As List(Of CongDan_SaiPham)
+    Private Sub QuanLyViPham_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        cboTrangThaiTimKiem.Items.AddRange({"Đã xử lý", "Chưa xử lý", "Đang xử lý"})
+        cboTrangThaiTimKiem.SelectedIndex = 0
+        cboTrangThaiTimKiem.SelectedIndex = 0
+        LoadData()
+        ConfigureDataGridView()
+
+        CapNhatThongKe()
+    End Sub
+    Private Sub CapNhatThongKe()
+
+        Dim soNguoiTichHop As Integer = congDanDAO.DemSoLuongCongDan()
+        lbSoNguoiTichHop.Text = soNguoiTichHop.ToString("#,##0")
+
+        Dim soNguoiViPham As Integer = viPhamDAO.soLuongViPham()
+        lblSoLoi.Text = soNguoiViPham.ToString("#,##0")
+
+    End Sub
     Public Sub New()
         InitializeComponent()
         InitializeDAO()
     End Sub
 
     Private Sub InitializeDAO()
-        Try
-            viPhamDAO = New ViPhamDao()
-        Catch ex As Exception
-            MessageBox.Show("Lỗi khởi tạo kết nối database: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+
+        viPhamDAO = New ViPhamDao()
+
     End Sub
 
-    Private Sub ViPham_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            ' Initialize ComboBox items
-            cboTrangThai.Items.AddRange({"Đã xử lý", "Chưa xử lý", "Đang xử lý"})
-            cboTrangThai.SelectedIndex = 0
-            cboTrangThaiTimKiem.SelectedIndex = 0
-
-            ' Load data to DataGridView
-            LoadData()
-
-            ' Configure DataGridView columns
-            ConfigureDataGridView()
-        Catch ex As Exception
-            MessageBox.Show("Lỗi khi tải form: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
 
     Private Sub LoadData()
         Try
-            If viPhamDAO Is Nothing Then
+            If ViPhamDao Is Nothing Then
                 InitializeDAO()
             End If
 
-            If viPhamDAO IsNot Nothing Then
-                dsSaiPham = viPhamDAO.GetAllCongDanSaiPham()
+            If ViPhamDao IsNot Nothing Then
+                dsSaiPham = ViPhamDao.GetAllCongDanSaiPham()
                 dgvSaiPham.DataSource = dsSaiPham
             Else
                 MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -121,30 +122,18 @@ Public Class ViPham
         End If
     End Sub
 
-    Private Sub dgvSaiPham_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSaiPham.CellClick
-        If e.RowIndex >= 0 Then
-            Dim saiPham As CongDan_SaiPham = DirectCast(dgvSaiPham.Rows(e.RowIndex).DataBoundItem, CongDan_SaiPham)
-            txtMaSaiPham.Text = saiPham.MaSaiPham
-            txtSoCCCD.Text = saiPham.SoCCCD
-            txtLoiSaiPham.Text = saiPham.LoiSaiPham
-            dtpNgaySai.Value = saiPham.NgaySai
-            txtNoiSaiPham.Text = saiPham.NoiSaiPham
-            txtMucPhat.Text = saiPham.MucPhat.ToString()
-            cboTrangThai.Text = saiPham.TrangThai
-        End If
-    End Sub
-
     Private Sub btnTK_Click(sender As Object, e As EventArgs) Handles btnTK.Click
         Try
-            If viPhamDAO Is Nothing Then
+            If ViPhamDao Is Nothing Then
                 InitializeDAO()
             End If
 
-            If viPhamDAO IsNot Nothing Then
+            If ViPhamDao IsNot Nothing Then
                 Dim tenNguoiDung As String = txtTenCongDan.Text.Trim()
                 Dim trangThai As String = cboTrangThaiTimKiem.Text
+                Dim cccd As String = txtCCCDTImKiem.Text.Trim()
 
-                dsSaiPham = viPhamDAO.GetCongDanSaiPhamByFilter(tenNguoiDung, trangThai)
+                dsSaiPham = viPhamDAO.GetCongDanSaiPhamByFilter(tenNguoiDung, trangThai, cccd)
                 dgvSaiPham.DataSource = dsSaiPham
             Else
                 MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -154,7 +143,7 @@ Public Class ViPham
         End Try
     End Sub
 
-    Private Sub txtTenCongDan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTenCongDan.KeyPress
+    Private Sub txtTenCongDan_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTenCongDan.KeyPress, txtCCCDTImKiem.KeyPress
         If e.KeyChar = ChrW(Keys.Enter) Then
             btnTK.PerformClick()
             e.Handled = True
@@ -178,4 +167,5 @@ Public Class ViPham
             MessageBox.Show("Lỗi khi xuất báo cáo: " & ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
 End Class

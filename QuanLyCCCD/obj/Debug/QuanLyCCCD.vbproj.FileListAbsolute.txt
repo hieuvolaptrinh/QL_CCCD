@@ -143,7 +143,6 @@ D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\N�
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
-D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\ReportTest.rdlc
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\QuanLyCCCD.exe.config
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\QuanLyCCCD.exe
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\QuanLyCCCD.pdb
@@ -169,6 +168,6 @@ D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\N�
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\stdole.dll
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.vbproj.Up2Date
-D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.ViPham.resources
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\bin\Debug\ReportSaiPham.rdlc
 D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.FormReportViPham.resources
+D:\OneDrive - University of Technology and Education\Dai_hoc\2024-2025\kì 2\Nộp báo cáo cô lệ\QuanLyCCCD - cá nhan\QuanLyCCCD\obj\Debug\QuanLyCCCD.QuanLyViPham.resources
